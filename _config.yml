@@ -5,7 +5,8 @@ locale: en_US
 description:
 logo: cats.jpg
 search: true
-url: https://toomanycats.github.io
+#url: https://toomanycats.github.io
+editor: vim
 
 # Jekyll configuration
 
@@ -19,6 +20,10 @@ gems:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+
+post:
+  template: "_layouts/default.html"
+  extension: md
 
 kramdown:
   input: GFM
