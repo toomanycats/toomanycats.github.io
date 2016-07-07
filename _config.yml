@@ -1,11 +1,11 @@
 # Site wide configuration
 
-title: Site Title
+title: You Can Never Have Too Many Cats
 locale: en_US
-description: Describe your website here.
-logo: site-logo.png
+description:
+logo: cats.jpg
 search: true
-url: http://localhost:4000
+url: http://127.0.0.1:4000
 
 # Jekyll configuration
 
@@ -36,9 +36,9 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 
 # Site owner
 owner:
-  name: Your Name
-  avatar: bio-photo.jpg
-  email: you@email.com
+  name: Toomanycats
+  avatar: cats.jpg
+  email: dpcuneo@fastmail.fm
   disqus-shortname:
   twitter: #username
   facebook: #username
