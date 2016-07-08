@@ -11,9 +11,9 @@ date: 2016-07-07 18:24:30
 ---
 
 # Pass
-[link to pass](https://www.passwordstore.org/)
-
 I've decided to be grow up and use a password manager. Did I tell you I run Linux...Not interested in Lastpass, KeepassX ( hilarious name ) or other bloated GUI based managers.
+
+[link to pass](https://www.passwordstore.org/)
 
 I did a quick unofficial poll on the LinkedIn group for Linux users and finally got a reply why someone would use `pass`.
 
@@ -22,6 +22,7 @@ I did a quick unofficial poll on the LinkedIn group for Linux users and finally 
 Pretty hilarious IMO. I don't know why this guy thought I was hating on his favorite password manager but I did get some useful information.
 
 ## Installing Pass
+
 Being that I run Ubuntu 14.04, install was just a `sudo apt-get install pass` away.
 ## Make a new GPG Key
 [gpg instructions](http://www.webupd8.org/2010/01/how-to-create-your-own-gpg-key.html)
