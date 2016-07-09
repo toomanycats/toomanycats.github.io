@@ -9,7 +9,10 @@ image:
   feature:
 date: 2016-07-08 15:40:20
 ---
-![numbat](/images/numbat.jpg)
+<figure>
+    <img width="512px" src="/images/numbat.jpg" alt="image of numbat">
+    <figcaption>A numbat found accidently while searching google for numba logo.</figcaption>
+</figure>
 
 ## Numba and Computing Means
 I needed a reason to visit Python JIT compilers, and in particular Numba.
