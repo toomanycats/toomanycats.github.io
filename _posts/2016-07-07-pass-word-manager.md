@@ -32,17 +32,43 @@ Being that I run Ubuntu 14.04, install was just a `sudo apt-get install pass` aw
 Follow those instructions and I have a new 4096 bit key.
 ```gpg --list-keys```
 
-I made up the next lines...
+While running gpg I get the messaage
 
-```/home/someone.gnupg/pubring.gpg
-----------------------------------
-pub    4096R/8923jJ6K 20150-09-12
 ```
+**We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+Not enough random bytes available.  Please do some other work to give
+the OS a chance to collect more entropy! (Need 210 more bytes)**
+```
+I tried working on email and moing the mouse around but it didn't seem to help.
+Not really knowing what I was doing, I tried this:
+
+{% highlight bash %}
+for i in {1..1000000};do
+    echo $RANDOM
+done
+{% endhighlight %}
+
+which might have helped as the key generation was done as soon as the loop finished.
+
+## look at the Keys:
+```gpg --list-keys```
+
+(not real output)
+{% highlight bash %}
+/home/user/.gnupg/pubring.gpg
+-------------------------------
+pub   4096R/9FFCD3ET 2016-07-08
+uid                  "Daniel Cuneo" (nick name) <dpcuneo@fastmail.fm>
+sub   4096R/41FH6H82 2016-07-08
+{% endhighlight %}
 
 ## Initialize a new password store
 [SO answer that helped me](http://unix.stackexchange.com/questions/53912/i-try-to-add-passwords-to-the-pass-password-manager-but-my-attempts-fail-with)
 
-```pass init 8923jJ6K```
+```pass init 9FFCD3ET```
 
 ## Git
 Pass can be used with Git.
@@ -57,20 +83,21 @@ pass git push -u origin --all
 
 ## Make Some Entries
 I'm going to start with my email since it should be the easiest.
+Pass uses plain ascii text so you can actually put anything you want in your password file. The standard thing to so is:
 
-{% highlight bash %}
-insert [ --echo, -e | --multiline, -m ] [ --force, -f ] pass-name Insert a
-new password into the password store called pass-name. This will read the new
-password from standard in. If --echo or -e is not specified, disable keyboard
-echo when the password is entered and confirm the password by asking for it
-twice. If --multiline or -m is specified, lines will be read until EOF or
-Ctrl+D is reached. Otherwise, only a single line from standard in is read.
-Prompt before overwriting an existing password, unless --force or -f is spec‐
-ified.
-{% endhighlight %}
+* password
+* username
+* url
+* other, such as answers to questions
 
-I'll start with my Stack Exchange password:
+I'll start with my Stack Exchange password and put it in a directory `forums`:
 ```pass generate forums/stackexchange.com```
+
+To add more lines to the randomly generated password:
+
+```pass edit forums/stackexchange```
+
+VI is opend and I add another line with my username.
 
 It appears to have worked...I can get access to my encrypted password by asking for it from ```pass```.
 
@@ -79,5 +106,5 @@ It appears to have worked...I can get access to my encrypted password by asking 
 I'm prompted for my gpg key password, and out comes the new randomly generated password for StackExchange.
 
 I pushed all this to BitBucket for use on a work machine.
-
+```pass push origin master```
 
