@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/ipython-5/</loc>
+    <loc>https://toomanycats.github.io/ipython-5/</loc>
 <lastmod>2016-07-09T04:42:13-07:00</lastmod>
 </url>
 <url>
-<loc>/iterative-means...numba/</loc>
+<loc>https://toomanycats.github.io/iterative-means...numba/</loc>
 <lastmod>2016-07-08T08:40:20-07:00</lastmod>
 </url>
 <url>
-<loc>/pass-word-manager/</loc>
+<loc>https://toomanycats.github.io/pass-word-manager/</loc>
 <lastmod>2016-07-07T11:24:30-07:00</lastmod>
 </url>
 <url>
-<loc>/First_Post/</loc>
+<loc>https://toomanycats.github.io/First_Post/</loc>
 <lastmod>2016-07-07T06:17:40-07:00</lastmod>
 </url>
 <url>
@@ -21,14 +21,5 @@
 </url>
 <url>
 <loc>/about/</loc>
-</url>
-<url>
-<loc>/theme-setup/</loc>
-</url>
-<url>
-<loc>/tags/</loc>
-</url>
-<url>
-<loc>/blog/</loc>
 </url>
 </urlset>
