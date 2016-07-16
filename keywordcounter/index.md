@@ -4,7 +4,7 @@ title: Keyword Counter Project
 excerpt: Discovering keywords in job openings
 modified:
 ---
-<center><a  href="http://keywordcounter.com">Keyword Counter  (http://keywordcounter.com)</a>
+<center><a  href="http://www.keywordcounter.com">Keyword Counter  (www.keywordcounter.com)</a>
 
 <figure>
     <img  src="/images/keyword_counter_logo.png" alt="keyword counter logo">
