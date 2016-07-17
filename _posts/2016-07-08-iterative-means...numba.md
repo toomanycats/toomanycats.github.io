@@ -22,12 +22,17 @@ When I was working in a neuroscience laboratory, we needed to compute the mean a
 
 The first iteration of the program I wrote the means didn't match a previously caculuated number, they were off my a small amount $\approx 0.001%$.
 
-My boss was not having it. It didn't matter if the discrepancy was trivial and smaller than the uncertainty of the signal numbers, that still needed fixing. He found this great article by a professional statistician, John Cook[1].
+My boss was not having it. It didn't matter if the discrepancy was trivial and smaller than the uncertainty of the signal numbers, that still needed fixing. He found this great article by a professional statistician, [John Cook](http://www.johndcook.com).
 
 ## Large Numbers and Floating Point Rounding Error
-I'm not going to attempt to explain the fine points of floating point numbers and how they are defined. You can read that on wikipedia.
+<figure>
+    <img src="/images/float_schematic.png" alt="schematic of a 32 bit float">
+    <figcaption>source: wikipedia</figcaption>
+</figure>
 
-It a nut shell, we need to know that a 32 bit floating points number has about 15 significant figures and a 64 bit floating point number has 32 sig figs.
+I'm not going to attempt to explain the fine points of floating point numbers and how they are defined. You can read that on [Wikipedia](https://en.wikipedia.org/wiki/Single-precision_floating-point_format#Single-precision_examples).
+
+It a nut shell, we need to know that a 32 bit floating points number has 24 significant bits which is about 7 decimal digits. A 64 bit floating point number has 15 decimals of precision[SO Answer nicely summarizes](http://stackoverflow.com/questions/13542944/how-many-significant-digits-have-floats-and-doubles-in-java).
 
 If we are calculating the standard deviation of large numbers on the order of magnitude of 1e9, when we perform the substraction the rounding error can cause a negaitve number where we'd expect and require a positive number. JC's blog post has more detail and better explanation; [link](http://www.johndcook.com/blog/2008/09/26/comparing-three-methods-of-computing-standard-deviation/).
 
@@ -90,4 +95,3 @@ Good, Numba is faster, I must be doing it somewhat correctly.
 
 _to be continued_
 
-[1]http://www.johncook.com/blog
