@@ -34,10 +34,12 @@ I'm not going to attempt to explain the fine points of floating point numbers an
 
 It a nut shell, we need to know that a 32 bit floating points number has 24 significant bits which is about 7 decimal digits. A 64 bit floating point number has 15 decimals of precision[SO Answer nicely summarizes](http://stackoverflow.com/questions/13542944/how-many-significant-digits-have-floats-and-doubles-in-java).
 
+To get a better feel for how a number is represented in floating point notation watch this 4 minute [video](https://www.youtube.com/watch?v=n-XozGu1viM).
+
 If we are calculating the standard deviation of large numbers on the order of magnitude of 1e9, when we perform the substraction the rounding error can cause a negaitve number where we'd expect and require a positive number. JC's blog post has more detail and better explanation; [link](http://www.johndcook.com/blog/2008/09/26/comparing-three-methods-of-computing-standard-deviation/).
 
 ## Numba
-So I use Python in my day to day programming and analysis work. The numpy `mean` method is not special in any way other than being vectorized and optimzed. Which is usually enough for my needs but not always.
+So I use Python in my day to day programming and analysis work. The numpy `mean` method is not special in any way other than being vectorized and optimzed. Which is usually enough for my needs but not always. Note, for weighted averages use the nump.average method.
 
 To compute the iterative standard deviation we also need an iterative mean.
 
@@ -94,4 +96,5 @@ Good, Numba is faster, I must be doing it somewhat correctly.
 
 
 _to be continued_
+
 
