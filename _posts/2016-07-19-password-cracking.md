@@ -11,14 +11,14 @@ date: 2016-07-19 12:46:41
 ---
 
 # Computerphile Episode on Password Cracking
-I recently discovered the Youtube channel, Computerphile. It's a great channel from you can learn a lot. This episode with Dr. Mike Pound examines how passwords are hacked; [link](https://www.youtube.com/watch?v=7U-RbOKanYs).
+I recently discovered the Youtube channel, [Computerphile](https://www.youtube.com/results?search_query=computerphile). It's a great channel you can learn a lot from. This [episode](https://www.youtube.com/watch?v=7U-RbOKanYs) with Dr. Mike Pound examines how passwords are hacked.
 
 In the video Dr. Pound uses a program called Hashcat, which runs on GPU's. He uses a cluster at his work to crack some hashed passwords.  Hashcat is open source and can be found on [Github](https://github.com/hashcat/hashcat).
 
-My machine is a System76 using the Intel Haswell graphics card which is not supported in the newest version of hashcat. However, the earlier versions which use only the CPU, are still available and called [hashcat-legacy](https://github.com/hashcat/hashcat-legacy). Hashcat has a nice website with a Wiki and documentation for the legacy version is [here](https://hashcat.net/wiki/doku.php?id=hashcat-legacy).
+My machine is a System76 using the Intel Haswell graphics card which is not supported in the newest version of Hashcat. However, the earlier versions which use only the CPU, are still available and called [hashcat-legacy](https://github.com/hashcat/hashcat-legacy). Hashcat has a nice website with a Wiki and documentation for the legacy version is [here](https://hashcat.net/wiki/doku.php?id=hashcat-legacy).
 
 ## Password Dictionary Attacks
-Before watching Dr. Pound's presentation,I didn't know what a dictionary attach meant. I figured it used a list of real world words, but didn't understand that it also means a list of words from previously hacked accounts. A real world sample of what use as passwords. Attacks then use these real world examples with permutations to get crack a password.
+Before watching Dr. Pound's presentation, I didn't know what a dictionary attack meant. I figured it used a list of real world words, but didn't understand that it also means a list of words from previously hacked accounts. A real world sample of what use as passwords. Attacks then use these real world examples with permutations to get crack a password.
 
 ## You Too Can Get A Dictionary
 There's a really cool repository on Github full of dictionaryies, [Seclist](https://github.com/danielmiessler/SecLists).
