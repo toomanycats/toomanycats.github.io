@@ -9,9 +9,7 @@ image:
   feature:
 date: 2016-07-23 12:45:48
 ---
-## Private Git Repository
-I wanted a private secure git repository for my encrypted password storage.
-I haven't worked in a laboratory while with access to Linux servers in a while. That would be my first choice. They are typically managed rather well and have git installed and no one bothers my stuff.
+I wanted a private secure git repository for my encrypted password storage. I haven't worked in a laboratory while with access to Linux servers in a while. That would be my first choice. They are typically managed rather well and have git installed and no one bothers my stuff.
 
 ## Get Used To Not Having SUDO Privaledges
 Even though I lack my customary access to lab servers at the moment, I do still have access to my University Linux account that is granted to the science majors.
