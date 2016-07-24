@@ -9,8 +9,6 @@ image:
   feature:
 date: 2016-07-19 12:46:41
 ---
-
-# Computerphile Episode on Password Cracking
 I recently discovered the Youtube channel, [Computerphile](https://www.youtube.com/results?search_query=computerphile). It's a great channel you can learn a lot from. This [episode](https://www.youtube.com/watch?v=7U-RbOKanYs) with Dr. Mike Pound examines how passwords are hacked.
 
 In the video Dr. Pound uses a program called Hashcat, which runs on GPU's. He uses a cluster at his work to crack some hashed passwords.  Hashcat is open source and can be found on [Github](https://github.com/hashcat/hashcat).
