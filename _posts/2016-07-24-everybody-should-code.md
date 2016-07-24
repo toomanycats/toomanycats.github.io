@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Everybody Should Code"
+title: "Everybody Should Learn to Code"
 modified:
 categories:
 excerpt:
@@ -9,12 +9,7 @@ image:
   feature:
 date: 2016-07-24 14:33:35
 ---
-
-## Everybody Should Learn to Code
-What does `code` mean? To me, that does not mean actual programming. So now
-we can discard the idea that everyone ahould be a programmer. [Coding
-Horror](https://blog. codinghorror. com/please-dont-learn-to-code/) put it well,
-but honestly that was obvious.
+I do not consider "coding" to mean actual programming. So now we can discard the idea that everyone ahould be a programmer. [Coding Horror](https://blog. codinghorror.com/please-dont-learn-to-code/) put it well, but honestly that was obvious.
 
 <figure>
     <img src="/images/Ibm_px_xt_color.jpg" alt="Picture of IBM XT personal computer">
