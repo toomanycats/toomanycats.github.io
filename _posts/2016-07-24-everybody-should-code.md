@@ -16,7 +16,7 @@ the idea that everyone should be a programmer. [Coding Horror](https://blog.codi
 
 <figure>
     <img src="/images/Ibm_px_xt_color.jpg" alt="Picture of IBM XT personal computer">
-    <figcaption>An IBM XT is the first computer on which I  learned DOS and Word Perfect. source: https://en.wikipedia.org/wiki/IBM_Personal_Computer_XT#/media/File:Ibm_px_xt_color.jpg)</figcaption>
+    <figcaption>An IBM XT is the first computer on which I  learned DOS and Word Perfect. source: https://en.wikipedia.org/wiki/IBM_Personal_Computer_XT#/media/File:Ibm_px_xt_color.jpg</figcaption>
 </figure>
 
 ## Stepping Back in Time
@@ -66,14 +66,14 @@ Getting away from the mouse and track pad is another
 worthwhile endeavor. Young people don't need to learn to program per se, they
 need to be comfortable in the programming environment.
 
-##Conclusion
+## Conclusion
 I dislike the use of the term, "code" and "coding" to mean programming and I'm not alone. It's a new slang whose provenance makes sense but it can be misleading.
 
 I think everyone should learn a markup language, period. I also believe that every child in school, should learn to keyboard by 5th grade. The next obvious milestone would be learning a markup language.
 
 In an ideal world we'd not stop there. In the real world where I live, public schools are over whelmed, kids with high level of opportunity are overwhelmed as is. Learning to "markup" is a lower hanging fruit that begins with keyboarding and can yield immediate results in productivity and entry to higher forms of IT.
 
-##Side Note: Teaching Kids About Computers
+## Side Note: Teaching Kids About Computers
 I've read some rather uninteresting articles about teaching children about programming in grade school. Below is my list of priorities for young people learning about practical computing.
 
 * Learn to keyboard, AKA typing class
