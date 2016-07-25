@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Everybody Should Learn to Code"
+title: "Everybody Should Learn to Markup"
 modified:
 categories:
 excerpt:
@@ -9,6 +9,8 @@ image:
   feature:
 date: 2016-07-24 14:33:35
 ---
+You've heard the slogan, "everyone should learn to code".
+
 I do not consider "coding" to mean actual programming. So now we can discard
 the idea that everyone should be a programmer. [Coding Horror](https://blog.codinghorror.com/please-dont-learn-to-code/) in the articel, Please Don't Learn to Code, put it well; but honestly that was obvious.
 
