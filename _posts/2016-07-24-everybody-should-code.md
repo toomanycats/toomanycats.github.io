@@ -9,7 +9,7 @@ image:
   feature:
 date: 2016-07-24 14:33:35
 ---
-I do not consider "coding" to mean actual programming. So now we can discard the idea that everyone ahould be a programmer. [Coding Horror](https://blog. codinghorror.com/please-dont-learn-to-code/) put it well, but honestly that was obvious.
+I do not consider "coding" to mean actual programming. So now we can discard the idea that everyone should be a programmer. [Coding Horror](https://blog. codinghorror.com/please-dont-learn-to-code/) put it well, but honestly that was obvious.
 
 <figure>
     <img src="/images/Ibm_px_xt_color.jpg" alt="Picture of IBM XT personal computer">
@@ -18,7 +18,7 @@ I do not consider "coding" to mean actual programming. So now we can discard the
 
 ## Stepping Back in Time
 The first word processor I learned to use was Word
-Perfect on an IBM XT. That's pre 286. I've nerver used a better word processor
+Perfect on an IBM XT. That's pre 286. I've never used a better word processor
 since. My mother was a secretary at the time in downtown SF and brought home
 the XT. She taught me the basics of DOS and WP.
 
@@ -32,8 +32,8 @@ taught me to type in WP using `reveal codes`.
 </figure>
 
 ## What is Coding Then?
-In this context, I'm refering to coding as using a
-[markup](https://en. wikipedia. org/wiki/Markup_language) language like `html`,
+In this context, I'm referring to coding as using a
+[markup](https://en. Wikipedia. org/wiki/Markup_language) language like `html`,
 or,`markdown`. It could by Linux's `roff`, `troff` or `groff`.  Wikipedia is
 written using the Mediawiki markdown.
 
@@ -52,7 +52,7 @@ else.
 
 ## Liberal Arts Majors and Writers
 If you consider yourself a writer of any sort then you probably care a lot
-about type setting. Type setting done with LaTeX or someother markup
+about type setting. Type setting done with LaTeX or some other markup
 language is much faster than a "What You See Is What You Get" (WYSIWYG) program
 such as Word or an Adobe product.
 
@@ -63,15 +63,15 @@ if you hit hard economic times and your MAC dies, then it's helpful to be able
 to run a 5 year old computer with a free OS and still typeset your work.
 
 ## As Long As We Are On Topic
-Getting away from the mouse and trackpad is another
+Getting away from the mouse and track pad is another
 worthwhile endeavor. Young people don't need to learn to program per se, they
-need to be comfortable in the programming envirnonment.
+need to be comfortable in the programming environment.
 
 ## Teaching Kids About Computers
 I've read some rather uninteresting articles about teaching children about programming in grade school. Below is my list of priorities for young people learning about practical computing.
 
 * Learn to keyboard, AKA typing class
-* Learn a Markup langauge
+* Learn a Markup language
 * Learn to use EMACS, VI, or some other system that doesn't use a mouse
 * Still interested
     * Learn the C programming language
