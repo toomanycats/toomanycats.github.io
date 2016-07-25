@@ -33,9 +33,8 @@ taught me to type in WP using `reveal codes`.
 
 ## What is Coding Then?
 In this context, I'm referring to coding as using a
-[markup](https://en. Wikipedia. org/wiki/Markup_language) language like `html`,
-or,`markdown`. It could by Linux's `roff`, `troff` or `groff`.  Wikipedia is
-written using the Mediawiki markdown.
+[markup](https://en.Wikipedia.org/wiki/Markup_language) language like `html`,
+or,`markdown`. It could be a Linux text processing program `roff`, `troff` or `groff`.  Wikipedia is written using the Mediawiki markdown.
 
 <figure>
     <img src="/images/latex_example.png" alt="Example of Latex input and output.">
