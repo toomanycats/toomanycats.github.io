@@ -49,6 +49,37 @@ So yes, I think everyone should be able to code in at least one markup
 language. There is no pressure to become a programmer, an IT manager, to setup
 the server that uses this markup text.
 
+## Working Example
+I'll explore a short example of the mark*up* language named, mark*down*.
+
+{% highlight bash %}
+## Side Note: Teaching Kids About Programming
+Below is my list of priorities for young people learning about practical computing.
+
+* Learn to keyboard, AKA typing class
+* Learn a Markup language
+* Use an advanced text editor
+    * [Sublime](https://www.sublimetext.com/)
+    * [VIM](http://www.openvim.com/)
+    * [EMACS](https://www.digitalocean.com/community/tutorials/how-to-use-the-emacs-editor-in-linux)
+* Still interested
+    * Learn the C programming language
+        * Write for loops and old school fizz buzz programs
+    * Learn a modern language
+        * Python
+        * Ruby
+        * Java
+    * Learn elementary algebra
+        * Get comfortable with Abstraction
+            * Using letters and words as place holders for other
+            * Builds foundation for a lot of logic
+{% endhighlight %}
+
+<figure>
+    <img src="/images/markup_example_rendered.png" alt="Example of rendered markup.">
+    <figcaption>Screen shot of rendered markup in a web brower.</figcaption>
+</figure>
+
 ## Liberal Arts Majors and Writers
 If you consider yourself a writer of any sort then you probably care a lot
 about type setting. Type setting done with LaTeX or some other markup
@@ -61,10 +92,6 @@ upon licensed software. I don't suggest switching to Linux right away. However,
 if you hit hard economic times and your MAC dies, then it's helpful to be able
 to run a 5 year old computer with a free OS and still typeset your work.
 
-## As Long As We Are On Topic
-Getting away from the mouse and track pad is another
-worthwhile endeavor. Young people don't need to learn to program per se, they
-need to be comfortable in the programming environment.
 
 ## Conclusion
 I dislike the use of the term, "code" and "coding" to mean programming and I'm
