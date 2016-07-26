@@ -81,7 +81,7 @@ as is. Learning to "markup" is a lower hanging fruit that begins with
 keyboarding and can yield immediate results in productivity and entry to higher
 forms of IT.
 
-## Side Note: Teaching Kids About Computers I've read some rather uninteresting
+## Side Note: Teaching Kids About Computers
 Below is my list of priorities for young people learning about practical computing.
 
 * Learn to keyboard, AKA typing class
