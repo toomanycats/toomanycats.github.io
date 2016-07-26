@@ -67,18 +67,29 @@ worthwhile endeavor. Young people don't need to learn to program per se, they
 need to be comfortable in the programming environment.
 
 ## Conclusion
-I dislike the use of the term, "code" and "coding" to mean programming and I'm not alone. It's a new slang whose provenance makes sense but it can be misleading.
+I dislike the use of the term, "code" and "coding" to mean programming and I'm
+not alone. It's a new slang whose provenance makes sense but it can be
+misleading.
 
-I think everyone should learn a markup language, period. I also believe that every child in school, should learn to keyboard by 5th grade. The next obvious milestone would be learning a markup language.
+I think everyone should learn a markup language, period. I also believe that
+every child in school, should learn to keyboard by 5th grade. The next obvious
+milestone would be learning a markup language.
 
-In an ideal world we'd not stop there. In the real world where I live, public schools are over whelmed, kids with high level of opportunity are overwhelmed as is. Learning to "markup" is a lower hanging fruit that begins with keyboarding and can yield immediate results in productivity and entry to higher forms of IT.
+In an ideal world we'd not stop there. In the real world where I live, public
+schools are over whelmed, kids with high level of opportunity are overwhelmed
+as is. Learning to "markup" is a lower hanging fruit that begins with
+keyboarding and can yield immediate results in productivity and entry to higher
+forms of IT.
 
-## Side Note: Teaching Kids About Computers
-I've read some rather uninteresting articles about teaching children about programming in grade school. Below is my list of priorities for young people learning about practical computing.
+## Side Note: Teaching Kids About Computers I've read some rather uninteresting
+Below is my list of priorities for young people learning about practical computing.
 
 * Learn to keyboard, AKA typing class
 * Learn a Markup language
-* Learn to use EMACS, VI, or some other system that doesn't use a mouse
+* Use an advanced text editor
+    * [Sublime](https://www.sublimetext.com/)
+    * [VIM](http://www.openvim.com/)
+    * [EMACS](https://www.digitalocean.com/community/tutorials/how-to-use-the-emacs-editor-in-linux)
 * Still interested
     * Learn the C programming language
         * Write for loops and old school fizz buzz programs
