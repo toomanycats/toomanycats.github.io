@@ -42,7 +42,7 @@ or,`markdown`. It could be a Linux text processing program `roff`, `troff` or `g
 
 <figure>
     <img src="/images/latex_example.png" alt="Example of Latex input and output.">
-    <figcaption>source: http://www.latextemplates.com/wp-content/uploads/2011/11/unformatted.png) Example of LaTeX input and output.</figcaption>
+    <figcaption>source: http://www.latextemplates.com/wp-content/uploads/2011/11/unformatted.png; Example of LaTeX input and output.</figcaption>
 </figure>
 
 So yes, I think everyone should be able to type in at least one
