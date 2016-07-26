@@ -16,7 +16,7 @@ the idea that everyone should be a programmer. [Coding Horror](https://blog.codi
 
 <figure>
     <img src="/images/Ibm_px_xt_color.jpg" alt="Picture of IBM XT personal computer">
-    <figcaption>An IBM XT is the first computer on which I  learned DOS and Word Perfect. source: https://en.wikipedia.org/wiki/IBM_Personal_Computer_XT#/media/File:Ibm_px_xt_color.jpg</figcaption>
+    <figcaption>An IBM XT is the first computer on which I learned DOS and Word Perfect. source: https://en.wikipedia.org/wiki/IBM_Personal_Computer_XT#/media/File:Ibm_px_xt_color.jpg</figcaption>
 </figure>
 
 ## Stepping Back in Time
@@ -37,17 +37,17 @@ classes in InDesign.
 
 ## What is Coding Then?
 In this context, I'm referring to coding as using a
-[markup](https://en.Wikipedia.org/wiki/Markup_language) language like `html`,
+[markup](https://en.Wikipedia.org/wiki/Markup\_language) language like `html`,
 or,`markdown`. It could be a Linux text processing program `roff`, `troff` or `groff`.  Wikipedia is written using the Mediawiki markdown.
 
 <figure>
     <img src="/images/latex_example.png" alt="Example of Latex input and output.">
-    <figcaption>source: http://www.latextemplates.com/wp-content/uploads/2011/11/unformatted.png; Example of LaTeX input and output.</figcaption>
+    <figcaption>source http://www.latextemplates.com/wp-content/uploads/2011/11/unformatted.png; Example of LaTeX input and output.</figcaption>
 </figure>
 
-So yes, I think everyone should be able to type in at least one
-markup language. There is no pressure to become a programmer, an IT manager, to
-setup the server that uses this markup text.
+So yes, I think everyone should be able to code in at least one markup
+language. There is no pressure to become a programmer, an IT manager, to setup
+the server that uses this markup text.
 
 ## Liberal Arts Majors and Writers
 If you consider yourself a writer of any sort then you probably care a lot
