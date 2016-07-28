@@ -9,13 +9,12 @@ image:
   feature:
 date: 2016-07-23 12:45:48
 ---
-I wanted a private secure git repository for my encrypted password storage. I haven't worked in a laboratory while with access to Linux servers in a while. That would be my first choice. They are typically managed rather well and have git installed and no one bothers my stuff.
+I wanted a private secure git repository for my encrypted password storage. I
+would typically use my work computer for such a thing, although I haven't
+worked in a laboratory lately. I remembered that my university account was
+still active and I could use that temporarily.
 
-## Get Used To Not Having SUDO Privaledges
-Even though I lack my customary access to lab servers at the moment, I do still have access to my University Linux account that is granted to the science majors.
-
-I don't feel too guilty using this resource since I give the department regular donations.
-
+## No SUDO Privileges
 The machine I will use runs CentOS and the trick will be to install git without access to yum. That means building [git](https://github. com/git/git) from source. Getting the source is easy and there's decent [install](https://github. com/git/git/blob/master/INSTALL) instructions as well.
 
 * Get the source [git](https://github. com/git/git)
@@ -23,7 +22,7 @@ The machine I will use runs CentOS and the trick will be to install git without 
     * Download the zip version from Github
         * scp to the future host
 * use configure to set the install directory
-* Turn off any "fancy" features that will require more dependancies
+* Turn off any "fancy" features that will require more dependencies
     * According to the INSTALL doc
         * NO_PERL (had an error and it's optional)
         * NO_OPENSSL b/c my `curl -V < 7. 34. 0`
@@ -51,7 +50,7 @@ cd git_password_store
 git init
 {% endhighlight %}
 
-I already have a private repo on Bitbucket.com for my encrypted passwords and I’m not removing it until this new repo is has worked for a few months.THerefore I’m adding another remote URL.
+I already have a private repo on Bitbucket.com for my encrypted passwords and I’m not removing it until this new repo is has worked for a few months.Therefore I’m adding another remote URL.
 
 {% highlight bash %}
 cd .password_store
