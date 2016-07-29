@@ -107,26 +107,3 @@ schools are over whelmed, kids with high level of opportunity are overwhelmed
 as is. Learning to "markup" is a lower hanging fruit that begins with
 keyboarding and can yield immediate results in productivity and entry to higher
 forms of IT.
-
-## Side Note: Teaching Kids About Programming
-Below is my list of priorities for young people learning about computing.
-
-* Learn to keyboard, AKA typing class
-* Learn a Markup language
-* Use an advanced text editor
-    * [Sublime](https://www.sublimetext.com/)
-    * [VIM](http://www.openvim.com/)
-    * [EMACS](https://www.digitalocean.com/community/tutorials/how-to-use-the-emacs-editor-in-linux)
-* Still interested
-    * Learn the C programming language
-        * Write for loops and old school fizz buzz programs
-    * Learn a modern language
-        * Python
-        * Ruby
-        * Java
-    * Learn elementary algebra
-        * Get comfortable with Abstraction
-            * Using letters and words as place holders for other
-            * Builds foundation for a lot of logic
-
-
