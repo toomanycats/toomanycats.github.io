@@ -109,7 +109,7 @@ keyboarding and can yield immediate results in productivity and entry to higher
 forms of IT.
 
 ## Side Note: Teaching Kids About Programming
-Below is my list of priorities for young people learning about practical computing.
+Below is my list of priorities for young people learning about computing.
 
 * Learn to keyboard, AKA typing class
 * Learn a Markup language
