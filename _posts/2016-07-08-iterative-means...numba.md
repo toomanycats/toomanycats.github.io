@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Iterative Means...Numba"
+title: "Python JIT Numba: Computing a Mean"
 modified:
 categories:
 excerpt:
@@ -10,8 +10,8 @@ image:
 date: 2016-07-08 15:40:20
 ---
 <figure>
-    <img width="512px" src="/images/numbat.jpg" alt="image of numbat">
-    <figcaption>A numbat found accidently while searching google for numba logo.</figcaption>
+    <img width="512px" src="/images/numbat_resized_median.jpg" alt="image of numbat">
+    <figcaption>A numbat found accidently while searching google for numba logo.</figcaption>http://www.johndcook.com/blog/standard_deviation/
 </figure>
 
 ## Numba and Computing Means
