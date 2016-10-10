@@ -1,23 +1,27 @@
 ---
-layout:
-post title: "Scientific Programming, Inputs and Outputs"
+layout: post
+title: "Organizing Data in Scientific Programming
 modified:
 categories:
-excerpt: tags: []
+excerpt:
+tags: []
 image:
-feature:
+    feature:
 date: 2016-10-09 12:29:12
 ---
+
+# Programming in a research laboratory
+I started in my scientific work experience in a lab that studies brain diseases
+utilizing MRI and other modalities. I then spent sometime in industry learning
+to work at a faster pace and with newer technology.
+
+Now I'm back in research and I'm  finding myself using a whole new set tools
+and ideology.
+
 <figure>
-    <img src='image/t1t2flairbrain.jpg' alt="Anatomical MRI modalities, T1, T2 and FLAIR">
+    <img src='/images/t1t2flairbrain.jpg' alt="Anatomical MRI modalities, T1, T2 and FLAIR">
     <figcaption>http://casemed.case.edu/clerkships/neurology/Web%20Neurorad/MRI%20Basics.htm</figcaption>
 </figure>
-
-# Programming in a research laboratory I started in my scientific work
-experience in a lab that studies brain diseases utilizing MRI and other
-modalities. I then spent sometime in industry learning to work at a faster pace
-and with newer technology. Now I'm back in research and I'm  finding myself
-using a whole new set tools and ideology.
 
 I'm going to focus these writings on organizing inputs, and in my cases that's
 brain MRI scans. Typically a study will have subjects, which undergoes sessions
@@ -102,11 +106,8 @@ simply use a database. Use SQLITE if it's small that's fine. Also, you don't
 want to depend on a DBA for basic work flow access.
 
 {% highlight bash %}
-#!/bin/bash ######################################
-# Author : Daniel Cuneo # Creation Date : 8-31-2015
-######################################
-
-# Inventory, Produce a single line of csv inventory
+{% raw %}
+#!/bin/bash
 
 function get\\_file\\_ext
 {
@@ -144,20 +145,22 @@ type\_=$(file\_type "${file\_}")
 size=$(get\_byte\_size "${file\_}")
 
 printf "\"${file\_}\",\"${ext}\",\"${type\_}\",\"${size}\""
+{% endraw %}
 {% endhighlight %}
 
 We want to call this row builder once for every file in a field system or
 directory. This is a perfect job for GNU Parallel.
 
 {% highlight bash %}
+{% raw %}
 find /somedirectory -type f | parallel --jobs 10
-'inventory.sh {}' >> output.txt {% endhighlight %}
+'inventory.sh {}' >> output.txt
+{% endraw %}
 {% endhighlight %}
-
 
 ### Short Cuts for Schema I hate writing out SQL create table syntax, and
 <figure>
-    <img src='images/pandas_logo.png' alt="Pandas Logo">
+    <img src='/images/pandas_logo.png' alt="Pandas Logo">
     <figcaption>Pandas is great for apply a regex for rows to build new categorical columnes.</figcaption>
 </figure>
 
@@ -179,10 +182,11 @@ create\_engine("sqlite:////path/to/inventory\_database.db")
 df.to\_sql("inventory", engine)
 {% endhighlight %}
 
-### SQLITE I like SqliteStudio I like to use a GUI studio for SQLITE,
-SqliteStudio is great;[http://sqlitestudio.pl/](SqliteStudio) It's not in the
-Debian or RHEL repos, but it is a standalone executable so there's no
-installation, but untar it and run.
+### SQLITE
+I like SqliteStudio I like to use a GUI studio for SQLITE, SqliteStudio is
+great;[http://sqlitestudio.pl/](SqliteStudio) It's not in the Debian or RHEL
+repos, but it is a standalone executable so there's no installation, but untar
+it and run.
 
 The first thing you'll want to do is to rebuild some of the structure that was
 lost going from a directory structure to a flat inventory file.
@@ -197,10 +201,12 @@ CASE
     ELSE `Neither` END AS `Sub`
 FROM `inventory`
     GROUP BY `Sub`
-{% end highlight %}
+{% endhighlight %}
+
+Screen shot of SqliteStudio.
 
 <figure>
-    <img src='image/sql\_studio\_query\_table.png' alt="Screen shot of SqlStudio">
+    <img src='/images/sql_studio_query_table.png' alt="Screen shot of SqlStudio">
     <figcaption>Exploring data for sanity checks.</figcaption>
 </figure>
 
