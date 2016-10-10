@@ -11,23 +11,23 @@ date: 2016-10-09 12:29:12
 ---
 
 # Programming in a research laboratory
-I started in my scientific work experience in a lab that studies brain diseases
+I started my scientific work experience in a lab that studies brain diseases
 utilizing MRI and other modalities. I then spent sometime in industry learning
 to work at a faster pace and with newer technology.
 
 Now I'm back in research and I'm  finding myself using a whole new set tools
-and ideology.
+and principals.
 
 <figure>
     <img src='/images/t1t2flairbrain.jpg' alt="Anatomical MRI modalities, T1, T2 and FLAIR">
     <figcaption>http://casemed.case.edu/clerkships/neurology/Web%20Neurorad/MRI%20Basics.htm</figcaption>
 </figure>
 
-I'm going to focus these writings on organizing inputs, and in my cases that's
-brain MRI scans. Typically a study will have subjects, which undergoes sessions
-that have runs. The magnets product files in the medical standard format known
-as DICOM. The meta data stored as date-times in the file name and some DICOM
-header tags.
+I'm going to focus this writing on organizing inputs to processing work flows,
+and in my cases that's brain MRI scans. Typically a study will have subjects,
+which undergo sessions, that have runs. The MRI Scanners produce files in the
+medical format known as DICOM. The meta data stored as date-times in
+the file name and some DICOM header tags.
 
 The files are brought into a researchers file system in a flat format. Then
 someone puts them ins some order that makes sense to humans.
@@ -38,8 +38,8 @@ someone puts them ins some order that makes sense to humans.
          * runs
 
 
-I ask you do we really need this step ? Why not just keep the files where they
-are and build a data base ? I've seen a lab where symbolic links where used to
+# Why not just keep the files where they are ?
+I've seen a lab where symbolic links where used to
 organize the data without having to copy it around. That was highly annoying
 when I was allowed access to those files for a data pull. Follow links in
 `rsync` would only make sense if I recreated the entire file structure. Those
@@ -60,10 +60,11 @@ since order of the inventory is not important we just reduce to a flat file. In
 fact using shell scripts can use useful in that one doesn't need to have a
 MapReduce machine setup with any additional tools than a shell.
 
-## Post Doc Programmers In most research field the programming is done my
-non-experts, people who may not have take a single programming class and learning
-from other post docs or and they likely have not been bitched out for their
-typically very poor programming habits and style.
+# Post Doc Programmers
+In most research field the programming is done my non-experts, people who may
+not have take a single programming class and learning from other post docs or
+and they likely have not been bitched out for their typically very poor
+programming habits and style.
 
 The biggest offender for me, are MATLAB scripts which build paths to data in
 puts. Complex monolithic programs that required a complex and opaque data
@@ -76,7 +77,7 @@ with medical DICOM images and there are fields in the header for helpful meta
 data such as the type of modality, or perhaps the "slice timing", which are
 sometimes left blank.
 
-### A Better Approach: A Data Base The most organized lab I worked in and got
+# A Better Approach: A Data Base The most organized lab I worked in and got
 my start, used a well thought out system to store meta data, a SQL database.
 This database was curated and maintained carefully. It was the life line of
 the lab which processed and stored several terabyte of imaging data for
@@ -158,7 +159,7 @@ find /somedirectory -type f | parallel --jobs 10
 {% endraw %}
 {% endhighlight %}
 
-### Short Cuts for Schema I hate writing out SQL create table syntax, and
+# Short Cuts for Schema I hate writing out SQL create table syntax, and
 <figure>
     <img src='/images/pandas_logo.png' alt="Pandas Logo">
     <figcaption>Pandas is great for apply a regex for rows to build new categorical columnes.</figcaption>
@@ -182,7 +183,7 @@ create\_engine("sqlite:////path/to/inventory\_database.db")
 df.to\_sql("inventory", engine)
 {% endhighlight %}
 
-### SQLITE
+## SQLITE
 I like SqliteStudio I like to use a GUI studio for SQLITE, SqliteStudio is
 great;[http://sqlitestudio.pl/](SqliteStudio) It's not in the Debian or RHEL
 repos, but it is a standalone executable so there's no installation, but untar
@@ -238,3 +239,6 @@ SELECT COUNT(`fullpath`) AS CNT, `Sub`
 Python on a Pandas data frame and reload. For smallish data sets this works
 well.
 
+
+# Conclusion
+So far no one has complained about this system. They are learning a few SQL commands to select their data. Overall it's a lot fewer lines of code than the MATLAB they would write.
