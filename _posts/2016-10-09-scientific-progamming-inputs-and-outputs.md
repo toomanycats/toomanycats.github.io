@@ -6,7 +6,7 @@ categories:
 excerpt:
 tags: []
 image:
-    feature:
+feature:
 date: 2016-10-09 12:29:12
 ---
 
