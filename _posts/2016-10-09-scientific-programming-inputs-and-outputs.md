@@ -168,12 +168,11 @@ since it's a simple and necessary sanity check.
 {% highlight sql %}
 ALTER TABLE `inventory` ADD COLUMN `Sub`
 
-INSERT INTO inventory(Sub)
-    SELECT `fullpath`,
-        CASE
-            WHEN `fullpath` LIKE '%/subA/%' THEN `SubA`
-            WHEN `fullpath` LIKE '%/subB/%' THEN `SubB`
-            ELSE `Neither` END AS `Sub`
+UPDATE TABLE inventory
+    VALUES = CASE
+             WHEN `fullpath` LIKE '%/subA/%' THEN `SubA`
+             WHEN `fullpath` LIKE '%/subB/%' THEN `SubB`
+             ELSE `Neither` END AS `Sub`
     FROM `inventory`
 {% endhighlight %}
 
