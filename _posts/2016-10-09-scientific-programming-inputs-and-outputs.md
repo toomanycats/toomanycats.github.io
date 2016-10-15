@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Organizing Data in Scientific Programming
+title: "Organizing Data in Scientific Programming"
 modified:
 categories:
 excerpt:
