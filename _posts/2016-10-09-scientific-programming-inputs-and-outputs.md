@@ -77,11 +77,11 @@ with medical DICOM images and there are fields in the header for helpful meta
 data such as the type of modality, or perhaps the "slice timing", which are
 sometimes left blank.
 
-# A Better Approach: A Data Base The most organized lab I worked in and got
-my start, used a well thought out system to store meta data, a SQL database.
-This database was curated and maintained carefully. It was the life line of
-the lab which processed and stored several terabyte of imaging data for
-research.
+# A Better Approach: A Data Base
+The most organized lab I worked in and got my start, used a well thought out
+system to store meta data, a SQL database. This database was curated and
+maintained carefully. It was the life line of the lab which processed and
+stored several terabyte of imaging data for research.
 
 I also learned during my short stint as a consultant, that generating an
 invoice for goods delivered and received is pretty  crucial. When given a data
@@ -184,6 +184,11 @@ df.to\_sql("inventory", engine)
 {% endhighlight %}
 
 ## SQLITE
+I mentioned SQLITE above. I'm somewhat new to SQL and databases and I've found
+that SQLITE3 is very easy to get going. The DB is a file that can be checked
+into source control and / or shared with co-workers. No need to wait on a DBA
+for prototyping.
+
 I like SqliteStudio I like to use a GUI studio for SQLITE, SqliteStudio is
 great;[http://sqlitestudio.pl/](SqliteStudio) It's not in the Debian or RHEL
 repos, but it is a standalone executable so there's no installation, but untar
@@ -235,10 +240,11 @@ SELECT COUNT(`fullpath`) AS CNT, `Sub`
             ORDER BY CNT
 {% endhighlight %}
 
-## Python to Speed things up For more interesting logic, I tend to use REGEX in
-Python on a Pandas data frame and reload. For smallish data sets this works
-well.
-
 
 # Conclusion
-So far no one has complained about this system. They are learning a few SQL commands to select their data. Overall it's a lot fewer lines of code than the MATLAB they would write.
+So far no one has complained about this system. They are learning a few SQL
+commands to select their data. Overall it's a lot fewer lines of code than the
+MATLAB they would write.
+
+Using my this system, sanity checking is built into the processing of asking
+for data.
