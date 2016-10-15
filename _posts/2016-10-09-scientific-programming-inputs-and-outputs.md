@@ -106,60 +106,6 @@ dense and hard to ready MATLAB scripts to build paths and configurations,
 simply use a database. Use SQLITE if it's small that's fine. Also, you don't
 want to depend on a DBA for basic work flow access.
 
-{% highlight bash %}
-{% raw %}
-#!/bin/bash
-
-function get\\_file\\_ext
-{
-    input="$1"
-    base="${input##*/}"
-    #base=$(basename "$input")
-    test\_=$(echo "$base" | grep -c "\.")
-
-    if [ $test\_ = 0 ];then
-        echo "NONE"
-        else
-            ext="${base##.*}"
-            #ext=$(echo "$base" | rev | cut -d. -f 1 | rev)
-    fi
-    echo ${ext}
-}
-
-function file\_type
-{
-    input="$1"
-    type\_=$(file "$input" | cut -d: -f 2 | sed 's/\W/ /g')
-    echo $type\_
-}
-
-function get\_byte\_size
-{
-    input="$1" size=$(du -b "$input" | cut -f 1)
-    echo "${size}"
-}
-
-
-file\_="$1"
-ext=$(get\_file\_ext "${file\_}")
-type\_=$(file\_type "${file\_}")
-size=$(get\_byte\_size "${file\_}")
-
-printf "\"${file\_}\",\"${ext}\",\"${type\_}\",\"${size}\""
-{% endraw %}
-{% endhighlight %}
-
-We want to call this row builder once for every file in a field system or
-directory. This is a perfect job for GNU Parallel.
-
-{% highlight bash %}
-{% raw %}
-find /somedirectory -type f | parallel --jobs 10
-'inventory.sh {}' >> output.txt
-{% endraw %}
-{% endhighlight %}
-
-# Short Cuts for Schema I hate writing out SQL create table syntax, and
 <figure>
     <img src='/images/pandas_logo.png' alt="Pandas Logo">
     <figcaption>Pandas is great for apply a regex for rows to build new categorical columnes.</figcaption>
@@ -175,12 +121,12 @@ SQLITE database file.
 
 {% highlight bash %}
 ipython import pandas as  pd from sqlalchemy import
-create\_engine
+create_engine
 
-df = pd.read\_csv("inventory\_file.csv") # if a line fails the exception will
+df = pd.read_csv("inventory_file.csv") # if a line fails the exception will
 be specific about which line which is great engine=
-create\_engine("sqlite:////path/to/inventory\_database.db")
-df.to\_sql("inventory", engine)
+create_engine("sqlite:////path/to/inventory_database.db")
+df.to_sql("inventory", engine)
 {% endhighlight %}
 
 ## SQLITE
@@ -190,7 +136,7 @@ into source control and / or shared with co-workers. No need to wait on a DBA
 for prototyping.
 
 I like SqliteStudio I like to use a GUI studio for SQLITE, SqliteStudio is
-great;[http://sqlitestudio.pl/](SqliteStudio) It's not in the Debian or RHEL
+great, [SqliteStudio](http://sqlitestudio.pl). It's not in the Debian or RHEL
 repos, but it is a standalone executable so there's no installation, but untar
 it and run.
 
