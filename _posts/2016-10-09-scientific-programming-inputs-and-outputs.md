@@ -41,45 +41,33 @@ someone puts them ins some order that makes sense to humans.
 # Why not just keep the files where they are ?
 I've seen a lab where symbolic links where used to
 organize the data without having to copy it around. That was highly annoying
-when I was allowed access to those files for a data pull. Follow links in
-`rsync` would only make sense if I recreated the entire file structure. Those
-data weren't in directories with names like, "time\_point\_n". If I'm going to
-write logic to organize files by date in chronological order, then I'll rewrite
-to new directory names.
+when I was allowed access to those files for a data pull. Following links using
+The directory names didn't where based on dates and not on longitudinal session numbers.
+So creating the file hierarchy wouldn't really provide useful information.
 
-But again...why ? After all the logic is done, I could just leave the DICOMs in
-place and use a database.And the good news is, handing date-times is pretty
-painless with Python and Pandas. That logic will also be reusable for the most
-part.
+I could just leave the DICOMs in place and use a database. Handling
+handing date-times is pretty painless with Python and Pandas. I can use Pandas to
+organize the date times into sessions.
 
-Perfect, so I'm back in research and I'm going to lean on Python / Pandas and
-work with databases instead of walking the file tree.
-
-This concept can scale using Hadoop as well. The inventory is mapped and the
-since order of the inventory is not important we just reduce to a flat file. In
-fact using shell scripts can use useful in that one doesn't need to have a
-MapReduce machine setup with any additional tools than a shell.
+This concept can scale using Hadoop as well. Mapping a function to inventory
+files, then since order of the inventory is not important, we reduce to a flat
+file. In fact using shell scripts can use useful since it simplifies the
+managagement of a MapReduce system. Although it's nice to run Python regex
+functions in bulk.
 
 # Post Doc Programmers
-In most research field the programming is done my non-experts, people who may
-not have take a single programming class and learning from other post docs or
-and they likely have not been bitched out for their typically very poor
-programming habits and style.
-
-The biggest offender for me, are MATLAB scripts which build paths to data in
-puts. Complex monolithic programs that required a complex and opaque data
-structure that itself required a complex and opaque script to get working.
+The biggest offender for me, is a MATLAB script which build paths to data
+inputs. I've had to work with more than one complex, monolithic programs that
+required a complex and opaque data structure that itself required a complex and
+opaque script to get working.
 
 Often times the researchers are unclear what data they, where it is located and
 if it's homogeneous or not. Especially with research tools which do not
-typically  enforce a standard just merely allow it, or not. For example, I work
-with medical DICOM images and there are fields in the header for helpful meta
-data such as the type of modality, or perhaps the "slice timing", which are
-sometimes left blank.
+typically  enforce a standard just merely allow it, or not.
 
 # A Better Approach: A Data Base
 The most organized lab I worked in and got my start, used a well thought out
-system to store meta data, a SQL database. This database was curated and
+system to store meta data in a SQL database. This database was curated and
 maintained carefully. It was the life line of the lab which processed and
 stored several terabyte of imaging data for research.
 
@@ -91,54 +79,7 @@ inconsistencies.
 
 I have written a handful of inventory programs which work with any type or
 group of files and a few particularly for medical imaging storage, e.g. DICOM
-and NiFTI1.
-
-I'm a Python programmer at heart, coming from MATLAB. I enjoy brushing up my C
-whenever the job warrant's it, and very comfortable with Linux shell scripting.
-I know that shell scripting can be abused. It's hard to read, doesn't have the
-greatest functionality with error handling. But it also runs pretty fast,
-especially when the heavy lifting is done by compiled C programs. It's also easy
-to exploit GNU Parallel to produce a csv inventory which can then be loaded
-into SQLITE.
-
-# Inventory Work flow for Data Inputs and Outputs Instead of writing annoying
-dense and hard to ready MATLAB scripts to build paths and configurations,
-simply use a database. Use SQLITE if it's small that's fine. Also, you don't
-want to depend on a DBA for basic work flow access.
-
-<figure>
-    <img src='/images/pandas_logo.png' alt="Pandas Logo">
-    <figcaption>Pandas is great for apply a regex for rows to build new categorical columnes.</figcaption>
-</figure>
-
-luckily there are solutions. One is to use CSV-KIT which uses Python to provide
-nice command line programs. Another way is just to use Pandas to create a data
-frame, which will right away help debug your inventory csv generation as it
-will fail to load if the rows are not homogeneous.
-
-Then use Sqlalchemy to connect to SQLITE and finally push the data frame to a
-SQLITE database file.
-
-{% highlight bash %}
-ipython import pandas as  pd from sqlalchemy import
-create_engine
-
-df = pd.read_csv("inventory_file.csv") # if a line fails the exception will
-be specific about which line which is great engine=
-create_engine("sqlite:////path/to/inventory_database.db")
-df.to_sql("inventory", engine)
-{% endhighlight %}
-
-## SQLITE
-I mentioned SQLITE above. I'm somewhat new to SQL and databases and I've found
-that SQLITE3 is very easy to get going. The DB is a file that can be checked
-into source control and / or shared with co-workers. No need to wait on a DBA
-for prototyping.
-
-I like SqliteStudio I like to use a GUI studio for SQLITE, SqliteStudio is
-great, [SqliteStudio](http://sqlitestudio.pl). It's not in the Debian or RHEL
-repos, but it is a standalone executable so there's no installation, but untar
-it and run.
+and NiFTI1. Even I have to start with a legacy file system I can create a DB.
 
 The first thing you'll want to do is to rebuild some of the structure that was
 lost going from a directory structure to a flat inventory file.
@@ -185,6 +126,45 @@ SELECT COUNT(`fullpath`) AS CNT, `Sub`
             ORDER BY CNT
 {% endhighlight %}
 
+# Short Cuts to Creating Smallish DB's
+It can be a pain to make a DB for a legacy data set or just to practice. THe inventory program I mentioned above
+can be sped of significantly using GNU Parallel.
+
+<figure>
+    <img src='/images/pandas_logo.png' alt="Pandas Logo">
+    <figcaption>Pandas is great for apply a regex for rows to build new categorical columnes.</figcaption>
+</figure>
+
+One is to use CSV-KIT which uses Python to provide nice command line programs.
+My prefered method,is to use Pandas to create a data frame, which will right
+away help debug your inventory csv generation as it will fail to load if the
+rows are not homogeneous. I've read a 3.3 million row csv file into Pandas in
+about 30 seconds. Not lightning fast but totally useable.
+
+
+Then using Sqlalchemy to connect to SQLITE and finally push the data frame to a
+SQLITE database file.
+
+{% highlight bash %}
+ipython import pandas as  pd from sqlalchemy import
+create_engine
+
+df = pd.read_csv("inventory_file.csv") # if a line fails the exception will
+be specific about which line which is great engine=
+create_engine("sqlite:////path/to/inventory_database.db")
+df.to_sql("inventory", engine)
+{% endhighlight %}
+
+## SQLITE
+I mentioned SQLITE above. I'm somewhat new to SQL and databases and I've found
+that SQLITE3 is very easy to get going. The DB is a file that can be checked
+into source control and / or shared with co-workers. No need to wait on a DBA
+for prototyping.
+
+I like SqliteStudio as GUI client for
+SQLITE.(http://sqlitestudio.pl)[SqliteStudio] It's not in the Debian or RHEL
+repos, but it is a standalone executable so there's no installation, but untar
+it and run.
 
 # Conclusion
 So far no one has complained about this system. They are learning a few SQL
