@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Wounded Words and Traps:Excepts from Mr. Lovinger\'s Book"
+title: "Wounded Words and Traps:Two Excerpts From A Style Dictionary"
 modified:
 categories:
 excerpt:
@@ -25,23 +25,22 @@ date: 2017-02-19 22:08:00
 The entry continues with more elegant detail that I omit to avoid infringement
 and as encouragement for the reader to buy the book.
 
-# The Penguin Dictionary of American English Usage and Style I've come to be
-friends with a resident of San Francisco who, although not a native, has lived
-in SF longer than my native SF self has been alive. Paul Lovinger is also a
-gifted author, editor and musician.
+# The Penguin Dictionary of American English Usage and Style
+I've come to be friends with a resident of San Francisco who, although not a
+native, has lived in SF longer than my native SF self has been alive. Paul
+Lovinger is a gifted journalist, author, editor and musician.
 
-# Where is your proof ? Please don\'t tell me it's in the pudding.... My friend
-Rob is annoyed when people fail to quote the entirety of a saying, thus not
-only attenuating the wisdom contained, but often distorting it.
+# Where is your proof ? Please don\'t tell me it's in the pudding...
+My friend Rob is annoyed when people fail to quote the entirety of a saying,
+thus not only attenuating the wisdom contained, but often distorting it.
 
-That's the case here, according the book:
+That's the case here, according the dictionary of usage:
 
 > The proverb about proof and pudding perplexes people. Some, it seems would
 > search through the pudding for the proof, however messy it would be to do
 > so.
 
-Allow me to quote the text slightly out of order for improved context and
-brevity:
+Suffer me to quote the text slightly out of order:
 
 >_Proof_ means _test_ in that context.
 
@@ -67,12 +66,13 @@ unambiguous sentences. Much like I try to do when writing computer programs. The
 language has the means to express compactly and accurately most messages, if
 the author's take the time to learn the subtleties of the medium.
 
-# Full Credits
-If you'd like to learn more about the English language and in particular, when to use _who_ and
-_whom_, then you'll like to purchase the book:
+# Full Credit
+If you'd like to learn more about the English language and in particular
+nuggets like when to use _who_ and _whom_, then you'll want to purchase this
+book:
 
 _The Penguin Dictionary of American English Usage and Style: a readable
 reference book, illuminating thousands of traps that snare writers and
-speakers_,  by Paul W. Lovinger
+speakers_, by Paul W. Lovinger
 
 ISBN 0-670-89166-5
