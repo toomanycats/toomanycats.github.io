@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Wounded Words and Traps:Excepts from Mr. Lovinger's Book"
+title: "Wounded Words and Traps:Excepts from Mr. Lovinger\'s Book"
 modified:
 categories:
 excerpt:
