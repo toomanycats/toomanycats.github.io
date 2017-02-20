@@ -15,15 +15,15 @@ critically, why it isn't, "Missing People", which is totally sane.
 
 > An article on labor problems in London said, "More than 150 people were
 > injured, mostly police officers and 67 persons were arrested." Why were the
-> injured called "people" and the arrested called "persons" ? Wither one would
+> injured called "people" and the arrested called "persons" ? Either one would
 > have been acceptable, but using both raises that question.
 
->When in doubt, you will probably nor go wrong using _people_ as the plural of
+>When in doubt, you will probably not go wrong using _people_ as the plural of
 >_person_. _Persons_, especially popular with lawyers and journalists, can
 >seem stilted at times, although it has a proper user.
 
 >_Persons_ emphasizes individuals. It applies to a specific but not large
->number:"The group honored seven persons."
+>number: "The group honored seven persons."
 
 The entry continues with more elegant detail that I omit to avoid infringement
 and as encouragement for the reader to buy the book credited below.
