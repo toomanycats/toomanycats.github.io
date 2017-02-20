@@ -10,6 +10,9 @@ image:
 date: 2017-02-19 22:08:00
 ---
 # Persons and People
+Funny how I've read or heard the phrase, "Missing Persons", and never thought
+critically, why it isn't, "Missing People", which is totally sane.
+
 > An article on labor problems in London said, "More than 150 people were
 > injured, mostly police officers and 67 persons were arrested." Why were the
 > injured called "people" and the arrested called "persons" ? Wither one would
@@ -23,14 +26,21 @@ date: 2017-02-19 22:08:00
 >number:"The group honored seven persons."
 
 The entry continues with more elegant detail that I omit to avoid infringement
-and as encouragement for the reader to buy the book.
+and as encouragement for the reader to buy the book credited below.
 
 # The Penguin Dictionary of American English Usage and Style
 I've come to be friends with a resident of San Francisco who, although not a
 native, has lived in SF longer than my native SF self has been alive. Paul
 Lovinger is a gifted journalist, author, editor and musician.
 
-# Where is your proof ? Please don\'t tell me it's in the pudding...
+His dictionary of style is a fun book to read as well as being a writers
+resource to understanding American English language idioms and often
+misunderstood usages.
+
+When I received my paper back copy, I found myself drawn to the _Whom and Who_,
+section.
+
+# Where is your proof ? Please don\'t tell me it's in the pudding
 My friend Rob is annoyed when people fail to quote the entirety of a saying,
 thus not only attenuating the wisdom contained, but often distorting it.
 
