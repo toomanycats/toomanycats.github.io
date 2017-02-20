@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Wounded Words and Traps:Two Excerpts From A Style Dictionary"
+title: "Wounded Words"
 modified:
 categories:
 excerpt:
