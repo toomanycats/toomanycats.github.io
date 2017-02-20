@@ -40,7 +40,9 @@ misunderstood usages.
 When I received my paper back copy, I found myself drawn to the _Whom and Who_,
 section.
 
+
 # Where is your proof ? Please don\'t tell me it's in the pudding
+
 My friend Rob is annoyed when people fail to quote the entirety of a saying,
 thus not only attenuating the wisdom contained, but often distorting it.
 
@@ -58,10 +60,11 @@ The full saying is:
 
 > The proof of the pudding is in the eating.
 
-When using this proverb, and likely any other, one must simple recreate the entire
-saying, or quote.:w
+When using this proverb, and likely any other, one must only recreate the entire
+saying, or quote.
 
 # Good Writing is Good
+
 Putting complex ideas, events, or flow charts into the written word is a
 science and an art. Having been exposed to the necessity and power of charting
 while doing a stint as a consultant, brought that wisdom home to me.
