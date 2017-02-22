@@ -14,7 +14,9 @@ Funny how I've read or heard the phrase, "Missing Persons", and never thought
 critically, why it isn't, "Missing People", which is totally sane.
 
 <figure>
-    <img src="/images/wounded_words.png" alt="image of refriderator magnet words with a red bandage over them">
+ <center>
+ <width="600px" src="/images/wounded_words.png" alt="image of refriderator magnet words with a red bandage over them">
+ </center>
 </figure>
 
 > An article on labor problems in London said, "More than 150 people were
@@ -43,7 +45,6 @@ misunderstood usages.
 
 When I received my paper back copy, I found myself drawn to the _Whom and Who_,
 section.
-
 
 # Where is your proof ? Please don\'t tell me it's in the pudding
 
