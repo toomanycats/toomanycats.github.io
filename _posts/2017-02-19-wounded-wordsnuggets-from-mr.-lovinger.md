@@ -17,13 +17,13 @@ critically, why it isn't, "Missing People", which is totally sane.
 > injured, mostly police officers and 67 persons were arrested." Why were the
 > injured called "people" and the arrested called "persons" ? Either one would
 > have been acceptable, but using both raises that question.
-
->When in doubt, you will probably not go wrong using _people_ as the plural of
->_person_. _Persons_, especially popular with lawyers and journalists, can
->seem stilted at times, although it has a proper user.
-
->_Persons_ emphasizes individuals. It applies to a specific but not large
->number: "The group honored seven persons."
+>
+> When in doubt, you will probably not go wrong using _people_ as the plural of
+> _person_. _Persons_, especially popular with lawyers and journalists, can
+> seem stilted at times, although it has a proper user.
+>
+> _Persons_ emphasizes individuals. It applies to a specific but not large
+> number: "The group honored seven persons."
 
 The entry continues with more elegant detail that I omit to avoid infringement
 and as encouragement for the reader to buy the book credited below.
@@ -71,17 +71,17 @@ while doing a stint as a consultant, brought that wisdom home to me.
 
 While my current duties are primarily as a programmer, I've found that I must also be a
 part time project manager. At least half of the emails I send are unofficial
-work products, send to my bosses. Updates about complex processing pipelines
-and summaries of  the state of affairs.
+work products, sent to my bosses. Updates about complex processing pipelines
+and summaries of the state of affairs.
 
-While writing emails to bosses and stake holders, I take care to craft
+While writing emails to stake holders, I take care to craft
 unambiguous sentences. Much like I try to do when writing computer programs. The
-language has the means to express compactly and accurately most messages, if
-the author's take the time to learn the subtleties of the medium.
+English language has the means to express compactly and accurately most messages, if
+care is taken to learn the subtleties of the medium.
 
 # Full Credit
 If you'd like to learn more about the English language and in particular
-nuggets like when to use _who_ and _whom_, then you'll want to purchase this
+nuggets like when to use _who_ and _whom_, or _emigrate_ vs _immigrate_, then you'll want to purchase this
 book:
 
 _The Penguin Dictionary of American English Usage and Style: a readable
