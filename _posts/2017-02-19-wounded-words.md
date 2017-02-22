@@ -14,7 +14,9 @@ Funny how I've read or heard the phrase, "Missing Persons", and never thought
 critically, why it isn't, "Missing People", which is totally sane.
 
 <figure>
- <src="/images/wounded_words.png" align="center" alt="image of refriderator magnet words with a red bandage over them">
+ <img src="/images/wounded_words.png" align="center" width="512px" alt="image of refriderator magnet words with a red bandage over them">
+ <figcaption>...The addition of the new meanings renders some of the words ambiguous. I call them wounded words. _Paul Lovinger_
+  </figcaption>
 </figure>
 
 > An article on labor problems in London said, "More than 150 people were
