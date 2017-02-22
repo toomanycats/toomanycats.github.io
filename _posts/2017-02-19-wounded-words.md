@@ -13,6 +13,10 @@ date: 2017-02-19 22:08:00
 Funny how I've read or heard the phrase, "Missing Persons", and never thought
 critically, why it isn't, "Missing People", which is totally sane.
 
+<figure>
+    <img src="/images/wounded_words.png" alt="image of refriderator magnet words with a red bandage over them">
+</figure>
+
 > An article on labor problems in London said, "More than 150 people were
 > injured, mostly police officers and 67 persons were arrested." Why were the
 > injured called "people" and the arrested called "persons" ? Either one would
