@@ -50,9 +50,11 @@ fslmerge -t $output $full_list
 
 This program is really a script wrapper and what is does is really simple.
 
-   * The script first separates a 4D file into volumes.
+   * Strips off the first volume to use as the reference volume
+   * separates the rest of the 4D file into volumes.
    * Then registers the volumes to the first volume.
    * Registered volumes are merged back into a 4D file
+   * cleans up
 
 That's it. Although, along the way, temp files are created, and a Python helper
 program is called to create a string for `fsl_merge`.
