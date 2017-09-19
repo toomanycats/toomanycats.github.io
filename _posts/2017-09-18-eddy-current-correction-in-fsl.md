@@ -70,20 +70,25 @@ presentation some years ago, that the correction for eddy currents turns out to
 be a power series solution ( be afraid, very afraid) and that in the end, the
 12 degrees of freedom affine registration actually is the solution !!
 
-## Simpler Code So now we can just use `mcflirt` with some options:
+## Simpler Code
+So now that we are armed with the facts, we can just use `mcflirt` with some options:
 
-{% highlight bash %} mcflirt <input 4D> <output 4D> -cost normcorr -refvol 0
--interp trilinear {% endhighlight %}
+{% highlight bash %}
+mcflirt <input 4D> <output 4D> -cost normcorr -refvol 0
+{% endhighlight %}
 
-That's it.
+That's it. No Python 2 to worry about and no extra weirdness.
 
 # How this bad programming bit me in the ass
 I write my pipelines in Python3. That's the future and it's a good one. When I
 ran `eddy_current`, I did not get an error code greater than 0, or stderror
-message, just a failure.
+message, just a failure with an obscure error message.
 
-That's because there's a helper program called `imglob` that's written in
-Python2.There's an interpreter directive that says to use:
+TBH, I guessed pretty quickly that there was a Python 2 vs Python 3 issue
+because the error mentioned something about `print` not having parenthesis.
+
+There's a helper program called `imglob` that's written in Python2.There's an
+interpreter directive that says to use:
 
 {% highlight bash %}
 #!/usr/bin/env python2
