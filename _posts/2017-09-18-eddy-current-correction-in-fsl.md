@@ -10,9 +10,10 @@ image:
 date: 2017-09-18 19:22:39
 ---
 
-# DTI processing: Eddy Current Correction I'm working on my first Diffusion
-Tensor Imaging project at work. There's new gotcha's I've encountered and I
-thought I should do a small write up about one that irked me today.
+# DTI processing: Eddy Current Correction
+I'm working on my first Diffusion Tensor Imaging project at work. There's new
+gotcha's I've encountered and I thought I should do a small write up about one
+that irked me today.
 
 ![eddy currnet animation from FSL](http://4.bp.blogspot.com/-pKxLdBQVDeI/Vg1B1q-I_gI/AAAAAAAADS0/Fs-KalhMqk8/s1600/before_after_hcp_v4.gif)
 
@@ -82,15 +83,39 @@ message, just a failure.
 That's because there's a helper program called `imglob` that's written in
 Python2.There's an interpreter directive that says to use:
 
-{% highlight bash %} #!/usr/bin/env python2 {% endhighlight %}
+{% highlight bash %}
+#!/usr/bin/env python2
+{% endhighlight %}
 
 Ok, but my IT folks don't use the virtual environments and I use Anaconda. So,
 the directive was ignored and the Python on my path was used, Python 3.5.
 
 ## It gets worse
-To make matters worse, the system call is not made with `Processing` module and
+To make matters worse, the system call is not made with `subprocess module and
 no attempt is made to catch the return codes. Thus, `imglob` helper can fail,
 and mothing happens.
+
+
+Simplistic use of `subprocess`:
+{% highlight python %}
+import subprocess
+
+cmd = "mcflirt {} {} {}"
+cmd = cmd.format(infile, outfile, refvol)
+
+process = subprocess.Popen(cmd, shell=True,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE)
+out, err = process.communicate()
+errcode = process.returncode
+
+if errcode > 0:
+    print err
+    raise Exception
+
+else:
+   return out
+{% endhighlight %}
 
 # Another Example
 I work with FreeSurfer a lot as well, and in 5.3 there's an annoying depedency
@@ -101,7 +126,8 @@ When you include the T2 image, it needs to be registered to the T1. So instead
 of just learning how to use `mri_convert` to do the registration, someone
 leaned on what they knew and used FSL's `flirt`.
 
-Thankfully in FreeSurfer 6 the need for flirt was removed and the annoying Perl warning was fixed.
+Thankfully in FreeSurfer 6 the need for `flirt` was removed and the annoying
+Perl deprecation warning was fixed.
 
 # Conclusion
 Don't add a dependency until after you've decided there's no other choice. If
