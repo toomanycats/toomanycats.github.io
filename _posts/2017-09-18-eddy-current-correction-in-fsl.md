@@ -15,7 +15,7 @@ I'm working on my first Diffusion Tensor Imaging project at work. There's new
 gotcha's I've encountered and I thought I should do a small write up about one
 that irked me today.
 
-![eddy currnet animation from FSL](http://4.bp.blogspot.com/-pKxLdBQVDeI/Vg1B1q-I_gI/AAAAAAAADS0/Fs-KalhMqk8/s1600/before_after_hcp_v4.gif)
+![eddy current animation from FSL](http://4.bp.blogspot.com/-pKxLdBQVDeI/Vg1B1q-I_gI/AAAAAAAADS0/Fs-KalhMqk8/s1600/before_after_hcp_v4.gif)
 
 The topic is eddy current correction. You might have read the FSL wiki page
 about it:
@@ -100,7 +100,7 @@ the directive was ignored and the Python on my path was used, Python 3.5.
 ## It gets worse
 To make matters worse, the system call is not made with `subprocess module and
 no attempt is made to catch the return codes. Thus, `imglob` helper can fail,
-and mothing happens.
+and nothing happens.
 
 
 Simplistic use of `subprocess`:
@@ -125,7 +125,7 @@ else:
 {% endhighlight %}
 
 # Another Example
-I work with FreeSurfer a lot as well, and in 5.3 there's an annoying depedency
+I work with FreeSurfer a lot as well, and in 5.3 there's an annoying dependency
 on FSL. If you wish to use the T2 weighted image to improve the regular FS
 processing, you can include the T2 on the command line.
 
@@ -138,5 +138,5 @@ Perl deprecation warning was fixed.
 
 # Conclusion
 Don't add a dependency until after you've decided there's no other choice. If
-the software suite is large liek FreeSurfer or FSL, there's bound to be a
+the software suite is large like FreeSurfer or FSL, there's bound to be a
 better way that is native to the platform.
