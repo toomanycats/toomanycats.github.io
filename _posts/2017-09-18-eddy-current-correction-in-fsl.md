@@ -1,0 +1,109 @@
+---
+layout: post
+title: "Eddy Current Correction in FSL"
+modified:
+categories:
+excerpt:
+tags: []
+image:
+  feature:
+date: 2017-09-18 19:22:39
+---
+
+# DTI processing: Eddy Current Correction I'm working on my first Diffusion
+Tensor Imaging project at work. There's new gotcha's I've encountered and I
+thought I should do a small write up about one that irked me today.
+
+![eddy currnet animation from FSL](http://4.bp.blogspot.com/-pKxLdBQVDeI/Vg1B1q-I_gI/AAAAAAAADS0/Fs-KalhMqk8/s1600/before_after_hcp_v4.gif)
+
+The topic is eddy current correction. You might have read the FSL wiki page
+about it:
+
+[FSL eddy_current](200~https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FDT/UserGuide#Eddy_Current_Correction).
+
+So I should start using the new `eddy` program but for now I'm not. The lab has
+been using the older style correction for some time and I can't just throw in a
+new method on an existing project.
+
+## Hidden Dependencies FSL is a pretty good set of tools. Most of it is written
+in C++ and runs rather quick. However, while fighting with "eddy_current" today
+I learned that Python 2 is a dependency.
+
+{% highlight bash %}
+cat eddy_current
+fslroi $input ${output}_ref $ref 1
+
+fslsplit $input ${output}_tmp
+full_list=`${FSLDIR}/bin/imglob ${output}_tmp????.*`
+
+for i in $full_list ; do
+    echo processing $i
+    echo processing $i >> ${output}.ecclog
+    ${FSLDIR}/bin/flirt -in $i -ref ${output}_ref -nosearch -interp ${interpm} -o $i -paddingsize 1 >> ${output}.ecclog
+done
+
+fslmerge -t $output $full_list
+/bin/rm ${output}_tmp????.* ${output}_ref*
+{% endhighlight %}
+
+
+This program is really a script wrapper and what is does is really simple.
+
+   * The script first separates a 4D file into volumes.
+   * Then registers the volumes to the first volume.
+   * Registered volumes are merged back into a 4D file
+
+That's it. Although, along the way, temp files are created, and a Python helper
+program is called to create a string for `fsl_merge`.
+
+How silly is that ??!!
+
+To create a string of files, we could just use `find` with a regular
+expression. That would avoid a whole dependency on another language.
+
+# Even Better Don't use `eddy_current` because you don't need to. I learned
+during a presentation some years ago, that the correction for eddy currents
+turns out to be a power series solution ( be afraid, very afraid) and that in
+the end, the 12 degrees of freedom affine registration actually is the solution
+!!
+
+## Simpler Code So now we can just use `mcflirt` with some options:
+
+{% highlight bash %} mcflirt <input 4D> <output 4D> -cost normcorr -refvol 0
+-interp trilinear {% endhighlight %}
+
+That's it.
+
+# How this bad programming bit me in the ass
+I write my pipelines in Python3. That's the future and it's a good one. When I
+ran `eddy_current`, I did not get an error code greater than 0, or stderror
+message, just a failure.
+
+That's because there's a helper program called `imglob` that's written in
+Python2.There's an interpreter directive that says to use:
+
+{% highlight bash %} #!/usr/bin/env python2 {% endhighlight %}
+
+Ok, but my IT folks don't use the virtual environments and I use Anaconda. So,
+the directive was ignored and the Python on my path was used, Python 3.5.
+
+## It gets worse
+To make matters worse, the system call is not made with `Processing` module and
+no attempt is made to catch the return codes. Thus, `imglob` helper can fail,
+and mothing happens.
+
+# Another Example
+I work with FreeSurfer a lot as well, and in 5.3 there's an annoying depedency
+on FSL. If you wish to use the T2 weighted image to improve the regular FS
+processing, you can include the T2 on the command line.
+
+When you include the T2 image, it needs to be registered to the T1. So instead
+of just learning how to use `mri_convert` to do the registration, someone
+leaned on what they knew and used FSL's `flirt`.
+
+Thankfully in FreeSurfer 6 the need for flirt was removed and the annoying Perl warning was fixed.
+
+# Conclusion
+Don't add a dependency until after you've decided there's no other choice. If
+the software suite is large liek FreeSurfer or FSL, there's bound to be a
+better way that is native to the platform.
