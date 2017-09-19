@@ -74,7 +74,7 @@ be a power series solution ( be afraid, very afraid) and that in the end, the
 So now that we are armed with the facts, we can just use `mcflirt` with some options:
 
 {% highlight bash %}
-mcflirt <input 4D> <output 4D> -cost normcorr -refvol 0
+mcflirt <input 4D> <output 4D> -cost normcorr -refvol 0 -dof 12
 {% endhighlight %}
 
 That's it. No Python 2 to worry about and no extra weirdness.
