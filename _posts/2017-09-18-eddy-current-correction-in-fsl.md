@@ -26,9 +26,10 @@ So I should start using the new `eddy` program but for now I'm not. The lab has
 been using the older style correction for some time and I can't just throw in a
 new method on an existing project.
 
-## Hidden Dependencies FSL is a pretty good set of tools. Most of it is written
-in C++ and runs rather quick. However, while fighting with "eddy_current" today
-I learned that Python 2 is a dependency.
+## Hidden Dependencies
+FSL is a pretty good set of tools. Most of it is written in C++ and runs rather
+quick. However, while fighting with `eddy_current` today I learned that Python
+2 is a dependency.
 
 {% highlight bash %}
 cat eddy_current
@@ -47,7 +48,6 @@ fslmerge -t $output $full_list
 /bin/rm ${output}_tmp????.* ${output}_ref*
 {% endhighlight %}
 
-
 This program is really a script wrapper and what is does is really simple.
 
    * The script first separates a 4D file into volumes.
@@ -62,11 +62,11 @@ How silly is that ??!!
 To create a string of files, we could just use `find` with a regular
 expression. That would avoid a whole dependency on another language.
 
-# Even Better Don't use `eddy_current` because you don't need to. I learned
-during a presentation some years ago, that the correction for eddy currents
-turns out to be a power series solution ( be afraid, very afraid) and that in
-the end, the 12 degrees of freedom affine registration actually is the solution
-!!
+# Even Better
+Don't use `eddy_current` because you don't need to. I learned during a
+presentation some years ago, that the correction for eddy currents turns out to
+be a power series solution ( be afraid, very afraid) and that in the end, the
+12 degrees of freedom affine registration actually is the solution !!
 
 ## Simpler Code So now we can just use `mcflirt` with some options:
 
