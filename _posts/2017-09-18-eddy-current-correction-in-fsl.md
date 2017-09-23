@@ -126,13 +126,15 @@ fslmerge -t $output $full_list
 /bin/rm ${output}_tmp????.* ${output}_ref*
 {% endhighlight %}
 
-### Let's fix it up more...
+### Let's fix it up more assuming we don't use `mcflirt` as a solution.
+A better way to handle temp files, is to make use of `/tmp`, and `trap`.
+Also, `find` can build strings with a lot of flexibility. I'm showing the use of globbing
+with `-name` but you could use `--regex`.
 
 {% highlight bash %}
 temp=$(mktemp -d)
 
-input_root=$(dirname $1)
-log=$input_root/log.ecc
+log="${output}.ecclog"
 
 function clean_up
 {
@@ -141,9 +143,9 @@ function clean_up
 
 trap clean_up ERR SIGINT
 
-fslroi $input ${output}_ref $ref 1
+fslroi $input ${temp}/ref $ref 1
 
-fslsplit $input ${temp}
+fslsplit $input ${temp}/tmp
 
 full_list=$(find ${temp} -type f -name "tmp*" -print0 | sort -z | tr '\0' ' ')
 
@@ -155,7 +157,7 @@ fi
 for i in $full_list ; do
     echo processing $i
     echo processing $i >> ${log}
-    ${FSLDIR}/bin/flirt -in $i -ref ${output}_ref -nosearch -interp ${interpm} -o $i -paddingsize 1 >> ${output}.ecclog
+    ${FSLDIR}/bin/flirt -in $i -ref ${temp}/ref.nii.gz -nosearch -interp ${interpm} -o $i -paddingsize 1 >> "${log}"
 done
 
 fslmerge -t $output $full_list
