@@ -97,7 +97,7 @@ interpreter directive that says to use:
 Ok, but my IT folks don't use the virtual environments and I use Anaconda. So,
 the directive was ignored and the Python on my path was used, Python 3.5.
 
-## It gets worse
+## It gets worse: No Error Codes Returned
 The call to `imglob` doesn't check for the return code, so you don't know if it
 fails.
 
@@ -110,7 +110,9 @@ fslroi $input ${output}_ref $ref 1
 fslsplit $input ${output}_tmp
 
 full_list=`${FSLDIR}/bin/imglob ${output}_tmp????.*`
-# improvement
+########################
+### check for errors ###
+########################
 if [[ $? -ne 0 || -z $fill_list ]]; then
     >&2 echo "failed to return string for fslmerge: see imglob"
     exit 2
