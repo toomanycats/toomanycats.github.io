@@ -109,10 +109,8 @@ fslroi $input ${output}_ref $ref 1
 
 fslsplit $input ${output}_tmp
 
-# old line below
-#full_list=`${FSLDIR}/bin/imglob ${output}_tmp????.*`
+full_list=`${FSLDIR}/bin/imglob ${output}_tmp????.*`
 # improvement
-full_list=$({FSLDIR}/bin/imglob ${output}_tmp????.*)
 if [[ $? -ne 0 || -z $fill_list ]]; then
     >&2 echo "failed to return string for fslmerge: see imglob"
     exit 2
@@ -126,6 +124,41 @@ done
 
 fslmerge -t $output $full_list
 /bin/rm ${output}_tmp????.* ${output}_ref*
+{% endhighlight %}
+
+### Let's fix it up more...
+
+{% highlight bash %}
+temp=$(mktemp -d)
+
+input_root=$(dirname $1)
+log=$input_root/log.ecc
+
+function clean_up
+{
+    rm -rf $temp
+}
+
+trap clean_up ERR SIGINT
+
+fslroi $input ${output}_ref $ref 1
+
+fslsplit $input ${temp}
+
+full_list=$(find ${temp} -type f -name "tmp*" -print0 | sort -z | tr '\0' ' ')
+
+if [ -z $fill_list ]; then
+    >&2 echo "Failed to return string for fslmerge. "
+    exit 2
+fi
+
+for i in $full_list ; do
+    echo processing $i
+    echo processing $i >> ${log}
+    ${FSLDIR}/bin/flirt -in $i -ref ${output}_ref -nosearch -interp ${interpm} -o $i -paddingsize 1 >> ${output}.ecclog
+done
+
+fslmerge -t $output $full_list
 {% endhighlight %}
 
 
