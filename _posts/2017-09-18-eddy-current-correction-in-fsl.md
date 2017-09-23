@@ -98,31 +98,36 @@ Ok, but my IT folks don't use the virtual environments and I use Anaconda. So,
 the directive was ignored and the Python on my path was used, Python 3.5.
 
 ## It gets worse
-To make matters worse, the system call is not made with `subprocess module and
-no attempt is made to catch the return codes. Thus, `imglob` helper can fail,
-and nothing happens.
+The call to `imglob` doesn't check for the return code, so you don't know if it
+fails.
 
+They have already written a decent shell script, why didn't they just add it ?
 
-Simplistic use of `subprocess`:
-{% highlight python %}
-import subprocess
+{% highlight bash %}
+cat eddy_current
+fslroi $input ${output}_ref $ref 1
 
-cmd = "mcflirt {} {} {}"
-cmd = cmd.format(infile, outfile, refvol)
+fslsplit $input ${output}_tmp
 
-process = subprocess.Popen(cmd, shell=True,
-                    stdout=subprocess.PIPE,
-                    stderr=subprocess.PIPE)
-out, err = process.communicate()
-errcode = process.returncode
+# old line below
+#full_list=`${FSLDIR}/bin/imglob ${output}_tmp????.*`
+# improvement
+full_list=$({FSLDIR}/bin/imglob ${output}_tmp????.*)
+if [[ $? -ne 0 || -z $fill_list ]]; then
+    >&2 echo "failed to return string for fslmerge: see imglob"
+    exit 2
+fi
 
-if errcode > 0:
-    print err
-    raise Exception
+for i in $full_list ; do
+    echo processing $i
+    echo processing $i >> ${output}.ecclog
+    ${FSLDIR}/bin/flirt -in $i -ref ${output}_ref -nosearch -interp ${interpm} -o $i -paddingsize 1 >> ${output}.ecclog
+done
 
-else:
-   return out
+fslmerge -t $output $full_list
+/bin/rm ${output}_tmp????.* ${output}_ref*
 {% endhighlight %}
+
 
 # Another Example
 I work with FreeSurfer a lot as well, and in 5.3 there's an annoying dependency
