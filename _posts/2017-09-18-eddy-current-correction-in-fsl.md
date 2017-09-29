@@ -15,7 +15,10 @@ I'm working on my first Diffusion Tensor Imaging project at work. There's new
 gotcha's I've encountered and I thought I should do a small write up about one
 that irked me today.
 
-![eddy current animation from FSL](http://4.bp.blogspot.com/-pKxLdBQVDeI/Vg1B1q-I_gI/AAAAAAAADS0/Fs-KalhMqk8/s1600/before_after_hcp_v4.gif)
+<figure>
+<img src="http://4.bp.blogspot.com/-pKxLdBQVDeI/Vg1B1q-I_gI/AAAAAAAADS0/Fs-KalhMqk8/s1600/before_after_hcp_v4.gif">
+<figcaption>_image source:https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/eddy_</figcaption>
+</figure>
 
 The topic is eddy current correction. You might have read the FSL wiki page
 about it:
