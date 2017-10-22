@@ -53,7 +53,7 @@ Consider for a moment "long options" typically denoted like so:
 
 {% highlight console %}
 cp --relative $src $tar
-{% end highlight %}
+{% endhighlight %}
 
 
 The style guid does provide some background for a choice here.
