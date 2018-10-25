@@ -16,19 +16,18 @@ date: 2018-10-24 20:16:16
 <img width="500" src="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/76/18/metablogapi/2055.HSG09091001_71EB0EE6.jpg">
 </figure>
 
-If you've been around the business world and Excel, you may have had to export your work as a Comma-separated-variable text file. Or you're a reseracher and a self taught programer and have realized that text file outputs are easily portable and a good choice for small to medium sized data files.
+If you've been around the business world and Excel, you may have had to export your work as a Comma-separated-variable text file. Or you're a researcher and a self taught programmer and have realized that text file outputs are easily portable and a good choice for small to medium sized data files.
 
-A common problem I've had with other people's CSV files, is that they suck...That is CSV is not a great format.
+A common problem I've had with other people's CSV files, is that they suck...That is CSV is not a great format. Some of the reasons CSV file are hard to work, are not solvable nor anyone's fault.
 
-Some of the reasons CSV file are hard to work, with are not solvable, and not anyone's fault. Text is a bulky format for data. Each ASCII character takes 2 bytes to store and if you encode in Unicode like UTF-8, then it's at least 2 bytes per character. That adds up in file size and can make sending files in email more of a PITA.
+Text is a bulky format for data. Each ASCII character takes 2 bytes to store and if you encode in Unicode like UTF-8, then it's at least 2 bytes per character. That adds up in file size and can make sending files in email more of a PITA.
 
-Now you really shouldn't be sending files via email when there's Box, Dropbox, and source control. But if you work in a business setting and using Excel often, then email would be a normal thing to want to do...although you shouldn't, use Box or Dropbox. There are reasons to email files to people...
+You shouldn't be sending files via email you should use: Box, Dropbox, or source control. However, there are reasons to email files to people and we all do it.
 
-##  Sources of a PITA from CSV
+##  Causes of Pain
 * **Data types are not preserved**
     - currency, date, time, integer or a decimal, that info is lost
 * **Font information**
-    - not often important but for sciencetific work can come up
 * **No standard format for CSV**
     - "c" stands for comma, but CSV's can be delimited by other characters
 * **Large file size for big data sets**
@@ -36,9 +35,7 @@ Now you really shouldn't be sending files via email when there's Box, Dropbox, a
     - long load time is a PITA to iterate with.
 
 ## How to Make CSV's Better
-Try to use ASCII when possible to save your files. It's more portable when the recieveing side is working in a terminal. Yes, terminals support Unicode now and VI and Emacs do as well, but sometimes non-ascii files can cause someone a PITA and you want them to get your work done ASAP.
-
-Real programmers probably won't care but this post is about making CSV's better and if you're passing your CSV on to do data analysis, in my experience ASCII helps.
+Try to use ASCII when possible to save your files. It's more portable when the receiving side is working in a terminal. Yes, terminals support Unicode now and VI and Emacs do as well. Sometimes Unicode files can cause someone pain and you want them to get work done ASAP.
 
 ### Not All Carriage Returns Are the Same
 <figure>
@@ -49,7 +46,10 @@ Real programmers probably won't care but this post is about making CSV's better 
 CSV files are text. Windows, OSX and Linux, treat the newline differently. With PC's, the newline is denoted by the codes `\n\r`, which is line-feed and a carriage return. Whereas Mac's use just the carriage return, `\r` and Linux text files will have only a line-feed, `\n`.
 
 This is annoying if you don't expect it. Keep this in mind when you see "extra" blank lines in a text file where you didn't expect it.
-Being a Linux user, I'd say you should always use the Linux newline format. It plays nicer with version control systems and slighly easier to convert to and from the other two platforms, OSX and Windows.
+
+Being a Linux user, I'd say you should always use the Linux newline format. It plays nicer with version control systems and slightly easier to convert to and from the other two platforms, OSX and Windows.
+
+If you work with CSV files a lot, find a good conversion tool for your platform to convert the text into either DOS mode or Linux. Terminal users have a program called `dos2unix` and `unix2dos` which handles those transformations easily and quickly. Those programs also exist for DOS `cmd` terminal.
 
 ### Enclose with Double Quotes
 <figure>
@@ -57,11 +57,9 @@ Being a Linux user, I'd say you should always use the Linux newline format. It p
 <figcaption>http://webdesignledger.com/wp-content/uploads/2010/12/apostrophe-quotation-marks-01.gif</figcaption>
 </figure>
 
-Since the column delimiter is a comma, it would be a PITA if your data happened to have commas is in it. It happens a lot if you're a European or if you are storing file names. Believe or not, there are file names out there that use commas in the name !
+Since the column delimiter is a comma, it would be a PITA if your data happened to have commas is in it. It happens a lot if you are European or if you are storing quirky file names. Believe or not, there are file names out there that use commas in the name.
 
 The solution is to use double quotes around each field. There is an option in Excel and other programs, to enclose all columns with quotes and I suggest the double quote, not a single, because they are prettier.
-
-This is one reason a person might choose to use a tab, `\t` as a delimiter.
 
 ### Choice of Delimiter
 <figure>
@@ -71,9 +69,9 @@ Remember Yahoo!, me neither, https://image.slidesharecdn.com/regexfinalsatyavvd-
 </figcaption>
 </figure>
 
-There is a reason to use tabs as a delimiter. It's not a horrible practice and some people prefer it. I think it's a PITA, because the file typically doens't display on a terminal very well. If you're learning to use the terminal more in Unix like environment, then look up the utility program "column".
+There is a reason to use tabs as a delimiter. It's not a horrible practice and some people prefer it. I think it's a PITA, because those files typically do not display on a terminal very well. If you're working in a terminal in Unix like environment and like tab spaced fields, then look up the utility program "column".
 
-I say, use commas, it's a CSV file right, why make people guess the delimiter ??
+Use commas, it's a CSV file.
 
 ## Use A Header Dammit
 <figure>
@@ -90,6 +88,8 @@ Use a header on the file even if it's obvious what the data is. Some programs lo
 
 **delimiter** The symbol that separates the fields.
 
-**newline character(s)** The special characters that signify where the line break is. These are not visible in most programs which display text. However, they will be visable if the program expects a particular symbol for a newline and another iscurrently used.
+**newline character(s)** The special characters that signify where the line break is. These are not visible in most programs which display text. However, they will be visable if the program expects a particular symbol for a newline and another is currently used.
 
 **text file** A type of file that is strictly text data as opposed to binary data. A Word doc is binary. If you open one is a text editor will likely see a bunch of symbols. Rich Text Format (RTF) is an exception, being pure text it is very portable.
+
+**header** The first row of a CSV file that contains the names of all the fields. It is formatted the same, double quoted and comma separated.
