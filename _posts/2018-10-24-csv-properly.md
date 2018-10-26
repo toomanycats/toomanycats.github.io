@@ -20,9 +20,9 @@ If you've been around the business world and Excel, you may have had to export y
 
 A common problem I've had with other people's CSV files, is that they suck... The main reason is because CSV is just not a great format. However, they can made better or worse and this post outlines a few simple ways to make they suck less.
 
-Text is a bulky format for data. Each ASCII character takes 2 bytes to store and if you encode in Unicode like UTF-8, then it's at least 2 bytes per character. That adds up in file size and can make sending files in email more of a PITA.
+Text is a bulky format for data. Each ASCII character takes 2 bytes to store and if you encode in Unicode, you're using at least 2 bytes per character. That adds up in file size and makes sending files in email a PITA.
 
-You shouldn't be sending files via email you should use: Box, Dropbox, or source control. However, there are reasons to email files to people and we all do it.
+You shouldn't be sending files via email you should use Box, Dropbox, or source control. However, there are reasons to email files to people and we all do it.
 
 ##  Causes of Pain
 * **Data types are not preserved**
@@ -49,9 +49,9 @@ This is annoying if you don't expect it. Keep this in mind when you see "extra" 
 
 Being a Linux user, I'd say you should always use the Linux newline format. It plays nicer with version control systems and slightly easier to convert to and from the other two platforms, OSX and Windows.
 
-If you work with CSV files a lot, find a good conversion tool for your platform to convert the text into either DOS mode or Linux. Terminal users have a program called `dos2unix` and `unix2dos` which handles those transformations easily and quickly. Those programs also exist for DOS `cmd` terminal.
+If you work with CSV files a lot, find a good conversion tool to convert the text into either DOS mode or Linux. Terminal users both Linux and DOS have a program called `dos2unix` and `unix2dos` which handles those transformations easily and quickly.
 
-### Enclose with Double Quotes
+### Enclose Fields with Double Quotes
 <figure>
 <img width="320" src="http://webdesignledger.com/wp-content/uploads/2010/12/apostrophe-quotation-marks-01.gif">
 <figcaption>http://webdesignledger.com/wp-content/uploads/2010/12/apostrophe-quotation-marks-01.gif</figcaption>
@@ -73,7 +73,7 @@ There is a reason to use tabs as a delimiter. It's not a horrible practice and s
 
 Use commas, it's a CSV file.
 
-## Use A Header Dammit
+## Use A Header
 <figure>
 <img width="260" src="https://cdn.shopify.com/s/files/1/0578/5357/products/Pic-5.jpeg?v=1469731081### Use A Header Dammit">
 <figcaption>Cool header, https://cdn.shopify.com/s/files/1/0578/5357/products/Pic-5.jpeg?v=1469731081</figcaption>
