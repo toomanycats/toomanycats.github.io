@@ -16,9 +16,9 @@ date: 2018-10-24 20:16:16
 <img width="500" src="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/76/18/metablogapi/2055.HSG09091001_71EB0EE6.jpg">
 </figure>
 
-If you've been around the business world and Excel, you may have had to export your work as a Comma-separated-variable text file. Or you're a researcher and a self taught programmer and have realized that text file outputs are easily portable and a good choice for small to medium sized data files.
+If you've been around the business world and Excel, you may have had to export your work as a CSV, Comma-separated-variable text file. Or you're a researcher, a self taught programmer and have realized that text file outputs are easily portable and a good choice for small to medium sized data files. Text files are easy to sanity check, run terminal tools against and open in alomost any program.
 
-A common problem I've had with other people's CSV files, is that they suck...That is CSV is not a great format. Some of the reasons CSV file are hard to work, are not solvable nor anyone's fault.
+A common problem I've had with other people's CSV files, is that they suck... The main reason is because CSV is just not a great format. However, they can made better or worse and this post outlines a few simple ways to make they suck less.
 
 Text is a bulky format for data. Each ASCII character takes 2 bytes to store and if you encode in Unicode like UTF-8, then it's at least 2 bytes per character. That adds up in file size and can make sending files in email more of a PITA.
 
