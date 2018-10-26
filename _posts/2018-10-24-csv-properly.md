@@ -10,7 +10,7 @@ image:
 date: 2018-10-24 20:16:16
 ---
 
-# Intermediate Guide to CSV Files
+# Ranting About CSV Files
 
 <figure>
 <img width="500" src="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/76/18/metablogapi/2055.HSG09091001_71EB0EE6.jpg">
