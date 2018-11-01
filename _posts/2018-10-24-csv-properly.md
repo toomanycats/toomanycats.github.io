@@ -86,24 +86,24 @@ Use a header on the file even if it's obvious what the data is. Some programs lo
 # Glossary
 **field**
 
-:Same as a column, the data will be columns, made of rows.
+: Same as a column, the data will be columns, made of rows.
 
 **row**
 
-:Rows go down in a column and left to right across is a row of data.
+: Rows go down in a column and left to right across is a row of data.
 
 **delimiter**
 
-:The symbol that separates the fields.
+: The symbol that separates the fields.
 
 **newline character(s)**
 
-:The special characters that signify where the line break is. These are not visible in most programs which display text. However, they will be visable if the program expects a particular symbol for a newline and another is currently used.
+: The special characters that signify where the line break is. These are not visible in most programs which display text. However, they will be visable if the program expects a particular symbol for a newline and another is currently used.
 
 **text file**
 
-:A type of file that is strictly text data as opposed to binary data. A Word doc is binary. If you open one is a text editor will likely see a bunch of symbols. Rich Text Format (RTF) is an exception, being pure text it is very portable.
+: A type of file that is strictly text data as opposed to binary data. A Word doc is binary. If you open one is a text editor will likely see a bunch of symbols. Rich Text Format (RTF) is an exception, being pure text it is very portable.
 
 **header**
 
-:The first row of a CSV file that contains the names of all the fields. It is formatted the same, double quoted and comma separated.
+: The first row of a CSV file that contains the names of all the fields. It is formatted the same, double quoted and comma separated.
