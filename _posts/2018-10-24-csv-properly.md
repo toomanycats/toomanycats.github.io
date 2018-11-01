@@ -25,6 +25,7 @@ Text is a bulky format for data. Each ASCII character takes 2 bytes to store and
 You shouldn't be sending files via email you should use Box, Dropbox, or source control. However, there are reasons to email files to people and we all do it.
 
 ##  Causes of Pain
+
 **Data types are not preserved**
     - currency, date, time, integer or a decimal, that info is lost
     - Excel does have a way to encode data types but it obviously doesn't port well

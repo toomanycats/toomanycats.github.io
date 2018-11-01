@@ -10,13 +10,13 @@ editor: vim
 
 # Jekyll configuration
 
-permalink:   /:categories/:title/
-markdown:    kramdown
+permalink: /:categories/:title/
+markdown: kramdown
 highlighter: rouge
 sass:
   sass_dir: _sass
   style: compressed
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -52,7 +52,7 @@ owner:
   disqus-shortname:
   twitter: #username
   facebook: #username
-  github: #username
+  github: toomanycats
   stackexchange: #http://stackoverflow.com/users/123456/username
   linkedin: #username
   instagram: #username
