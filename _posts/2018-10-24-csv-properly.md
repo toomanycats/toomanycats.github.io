@@ -26,14 +26,14 @@ You shouldn't be sending files via email you should use Box, Dropbox, or source 
 
 ##  Causes of Pain
 
-**Data types are not preserved**
+* **Data types are not preserved**
     - currency, date, time, integer or a decimal, that info is lost
     - Excel does have a way to encode data types but it obviously doesn't port well
         - [https://superuser.com/questions/318420/formatting-a-comma-delimited-csv-to-force-excel-to-interpret-value-as-a-string](superuser question)
-**Font information**
-**No standard format for CSV**
+* **Font information**
+* **No standard format for CSV**
     - "c" stands for comma, but CSV's can be delimited by other characters
-**Large file size for big data sets**
+* **Large file size for big data sets**
     - makes it hard to send files in email
     - long load time is a PITA to iterate with.
 
