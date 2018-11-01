@@ -28,7 +28,7 @@ You shouldn't be sending files via email you should use Box, Dropbox, or source 
 * **Data types are not preserved**
     * currency, date, time, integer or a decimal, that info is lost
     * Excel does have a way to encode data types but it obviously doesn't port well
-    * [https://superuser.com/questions/318420/formatting-a-comma-delimited-csv-to-force-excel-to-interpret-value-as-a-string](superuser question)
+    * [superuser question](https://superuser.com/questions/318420/formatting-a-comma-delimited-csv-to-force-excel-to-interpret-value-as-a-string)
 * **Font information**
 * **No standard format for CSV**
     * "c" stands for comma, but CSV's can be delimited by other characters
@@ -84,14 +84,26 @@ Use commas, it's a CSV file.
 Use a header on the file even if it's obvious what the data is. Some programs load a CSV file and automatically pick off the header and it helps the next person. It's really sucks to get a file in email from someone asking me to help them and there's no header.
 
 # Glossary
-**field** Same as a column, the data will be columns, made of rows.
+**field**
 
-**row** Rows go down in a column and left to right across is a row of data.
+:Same as a column, the data will be columns, made of rows.
 
-**delimiter** The symbol that separates the fields.
+**row**
 
-**newline character(s)** The special characters that signify where the line break is. These are not visible in most programs which display text. However, they will be visable if the program expects a particular symbol for a newline and another is currently used.
+:Rows go down in a column and left to right across is a row of data.
 
-**text file** A type of file that is strictly text data as opposed to binary data. A Word doc is binary. If you open one is a text editor will likely see a bunch of symbols. Rich Text Format (RTF) is an exception, being pure text it is very portable.
+**delimiter**
 
-**header** The first row of a CSV file that contains the names of all the fields. It is formatted the same, double quoted and comma separated.
+:The symbol that separates the fields.
+
+**newline character(s)**
+
+:The special characters that signify where the line break is. These are not visible in most programs which display text. However, they will be visable if the program expects a particular symbol for a newline and another is currently used.
+
+**text file**
+
+:A type of file that is strictly text data as opposed to binary data. A Word doc is binary. If you open one is a text editor will likely see a bunch of symbols. Rich Text Format (RTF) is an exception, being pure text it is very portable.
+
+**header**
+
+:The first row of a CSV file that contains the names of all the fields. It is formatted the same, double quoted and comma separated.
