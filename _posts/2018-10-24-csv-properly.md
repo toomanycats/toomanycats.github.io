@@ -25,17 +25,16 @@ Text is a bulky format for data. Each ASCII character takes 2 bytes to store and
 You shouldn't be sending files via email you should use Box, Dropbox, or source control. However, there are reasons to email files to people and we all do it.
 
 ##  Causes of Pain
-
 * **Data types are not preserved**
-    - currency, date, time, integer or a decimal, that info is lost
-    - Excel does have a way to encode data types but it obviously doesn't port well
-        - [https://superuser.com/questions/318420/formatting-a-comma-delimited-csv-to-force-excel-to-interpret-value-as-a-string](superuser question)
+    * currency, date, time, integer or a decimal, that info is lost
+    * Excel does have a way to encode data types but it obviously doesn't port well
+    * [https://superuser.com/questions/318420/formatting-a-comma-delimited-csv-to-force-excel-to-interpret-value-as-a-string](superuser question)
 * **Font information**
 * **No standard format for CSV**
-    - "c" stands for comma, but CSV's can be delimited by other characters
+    * "c" stands for comma, but CSV's can be delimited by other characters
 * **Large file size for big data sets**
-    - makes it hard to send files in email
-    - long load time is a PITA to iterate with.
+    * makes it hard to send files in email
+    * long load time is a PITA to iterate with.
 
 ## How to Make CSV's Better
 Try to use ASCII when possible to save your files. It's more portable when the receiving side is working in a terminal. Yes, terminals support Unicode now and VI and Emacs do as well. Sometimes Unicode files can cause someone pain and you want them to get work done ASAP.
